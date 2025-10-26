@@ -1,0 +1,478 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>One Day • One Night Adventure Camp @ East Coast Park</title>
+  <meta name="description" content="Overnight kids camping at East Coast Park: BBQ dinner, beach games, night walk, sunrise stretch. 5pm–11am. Safe, guided and super fun!" />
+  <style>
+    /* Brand Bar */
+.brand-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 12px 16px;
+  background: #f7fbfe;               /* your chosen page bg */
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  text-decoration: none;
+}
+
+.brand picture,
+.brand img {
+  display: block;
+  max-width: 88px;                    /* desktop logo size */
+  height: auto;
+}
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+}
+
+.brand-title {
+  margin: 0;
+  font-size: clamp(18px, 2.6vw, 26px);
+  font-weight: 800;
+  color: #0e3b3f;                     /* deep teal to match logo */
+  letter-spacing: 0.2px;
+}
+
+.brand-tagline {
+  margin: 2px 0 0;
+  font-size: clamp(12px, 1.6vw, 14px);
+  color: #2f6a70;                      /* softer teal */
+  opacity: 0.9;
+}
+
+/* Mobile tweaks */
+@media (max-width: 640px) {
+  .brand picture,
+  .brand img { max-width: 68px; }      /* smaller logo on phones */
+  .brand-bar { padding: 10px 12px; }
+}
+
+/* Optional: sticky header */
+.sticky .brand-bar {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  backdrop-filter: saturate(1.2) blur(6px);
+  background: rgba(247, 251, 254, 0.9);
+}
+
+
+    /* === Global reset / layout fixes === */
+    *,*::before,*::after{box-sizing:border-box}
+    html,body{margin:0}
+    img,svg,video,canvas{max-width:100%;height:auto}
+    button,input,select,textarea{font:inherit}
+
+    /* === Bright, friendly theme === */
+    :root{
+      --bg:#f7fbfe;            /* updated per your request */
+      --fg:#0e1b2b;
+      --muted:#48607a;
+      --brand:#1d4ed8;
+      --accent:#06b6d4;
+      --card:#ffffff;
+      --stroke:#dbe7fb;
+      --shadow:0 10px 30px rgba(0,56,146,.12);
+      --radius:16px;
+      --chip:#eef5ff;
+      --successBG:#d1f4e0; --successBorder:#9be6c0; --successFG:#0f5132;
+      --errorBG:#ffe0e0; --errorBorder:#ffb4b4; --errorFG:#6b1111;
+    }
+
+    body{background:var(--bg);color:var(--fg);font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial,sans-serif;line-height:1.5}
+    .wrap{max-width:1100px;margin:0 auto;padding:24px}
+
+    /* TOP BANNER */
+    .top-banner{
+      background: linear-gradient(90deg, #ffe67a, #ffd04d);
+      color:#5b3c00; text-align:center; padding:10px 12px; font-weight:800;
+      border-bottom:1px solid #f6c64b; letter-spacing:.2px
+    }
+
+    /* HERO */
+    .hero{
+      background: linear-gradient(180deg,#eef6ff 0%,#fff 65%), radial-gradient(900px 500px at 5% -5%, rgba(29,78,216,.15), transparent 55%), radial-gradient(900px 500px at 95% 0%, rgba(6,182,212,.15), transparent 55%);
+      padding:48px 24px 36px;text-align:center;border-bottom:1px solid var(--stroke)
+    }
+    .badge{display:inline-block;background:var(--chip);border:1px solid var(--stroke);padding:6px 10px;border-radius:999px;color:#19416b;font-size:13px;letter-spacing:.2px}
+    h1{font-size:clamp(32px,5vw,54px);margin:16px 0 10px}
+    .lead{font-size:clamp(16px,2.6vw,20px);color:#274969;max-width:820px;margin:0 auto 18px}
+    .hero-info{margin-top:8px;color:#1c3552}
+    .cta{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:8px}
+    .btn{background:linear-gradient(90deg,var(--brand),var(--accent));border:none;color:#fff;padding:14px 20px;border-radius:12px;font-weight:700;cursor:pointer;box-shadow:var(--shadow)}
+    .btn.outline{background:#fff;border:1px solid var(--stroke);color:#0e1b2b}
+    a{color:#0f3fd6;text-decoration:none}
+
+    /* Sections / cards */
+    section{padding:38px 0;border-top:1px solid var(--stroke)}
+    .grid{display:grid;gap:18px}
+    @media (min-width:900px){.grid-3{grid-template-columns:repeat(3,1fr)} .grid-2{grid-template-columns:1.2fr .8fr}}
+    .card{background:var(--card);border:1px solid var(--stroke);border-radius:var(--radius);padding:18px;box-shadow:var(--shadow)}
+    h2{font-size:clamp(24px,3.8vw,34px);margin:0 0 14px}
+    h3{margin:6px 0 8px;font-size:20px}
+    .k{color:var(--muted);font-size:14px}
+    .pill{display:inline-block;padding:6px 10px;border-radius:999px;background:var(--chip);border:1px solid var(--stroke);color:#0e1b2b;font-size:12px;margin:3px 6px 0 0}
+    .list{margin:10px 0 0;padding-left:18px}
+
+    /* Timeline */
+    .timeline{margin-top:8px}
+    .row{display:flex;gap:12px;padding:12px;border-left:4px solid var(--brand);margin-left:6px;background:#f6faff;border:1px solid var(--stroke);border-radius:12px}
+    .row+.row{margin-top:8px}
+    .time{min-width:88px;color:#0f3fd6;font-weight:800}
+    .note{color:#1c3552}
+
+    /* FORM — alignment + cross-browser normalization */
+    form label{display:block;font-size:14px;color:#274969;margin:8px 0 6px}
+    input,select,textarea{
+      width:100%;background:#fff;border:1.5px solid var(--stroke);color:var(--fg);
+      padding:12px;border-radius:12px;outline:none;transition:border-color .15s, box-shadow .15s;
+      -webkit-appearance:none;appearance:none; /* iOS Safari */
+    }
+    input:focus,select:focus,textarea:focus{border-color:#9ac2ff;box-shadow:0 0 0 4px rgba(29,78,216,.12)}
+    .two{display:grid;grid-template-columns:1fr;gap:16px}
+    @media (min-width:700px){.two{grid-template-columns:1fr 1fr}}
+
+    /* Consent row — fully clickable label wrapper */
+    .consent-wrap{
+      display:flex;gap:12px;align-items:center;padding:12px;border:1px dashed #b9d4ff;background:#f0f6ff;border-radius:12px;margin-top:6px;
+      cursor:pointer; user-select:none; position:relative; z-index:0;
+    }
+    .consent-wrap input[type="checkbox"]{
+      width:24px;height:24px;accent-color:var(--brand);flex:0 0 auto;cursor:pointer;
+    }
+    .consent-wrap span{color:#143454;font-weight:600;line-height:1.35}
+
+    /* Status messages */
+    .msg{margin-top:12px;font-size:14px}
+    .msg.ok{color:var(--successFG);background:var(--successBG);border:1px solid var(--successBorder);padding:10px;border-radius:10px}
+    .msg.err{color:var(--errorFG);background:var(--errorBG);border:1px solid var(--errorBorder);padding:10px;border-radius:10px}
+    .hidden{display:none}
+
+    /* Sticky CTA */
+    .stickybar{position:sticky;bottom:16px;display:flex;justify-content:center;z-index:10}
+    .stickybar .btn{padding:16px 22px}
+
+
+    /* 1) Do NOT remove native appearance for checkboxes */
+input, select, textarea{
+  width:100%;
+  background:#fff;
+  border:1.5px solid var(--stroke);
+  color:var(--fg);
+  padding:12px;
+  border-radius:12px;
+  outline:none;
+  transition:border-color .15s, box-shadow .15s;
+  /* REMOVE these two lines from the generic rule (they break the checkbox):
+     -webkit-appearance:none;
+     appearance:none;
+  */
+}
+
+/* 2) Keep "no appearance" for text-like fields only (optional but tidy) */
+input[type="text"], input[type="email"], input[type="tel"], input[type="search"],
+input[type="number"], select, textarea{
+  -webkit-appearance:none;
+  appearance:none;
+}
+
+/* 3) Explicitly restore native checkbox visuals + accent color */
+.consent-wrap input[type="checkbox"]{
+  -webkit-appearance: checkbox;
+  appearance: auto;              /* brings back the native ✓ */
+  width: 20px; height: 20px;     /* big enough to tap, can tweak 22–24px */
+  accent-color: var(--brand);    /* blue tick on modern browsers */
+  border: initial; background: initial;
+  cursor: pointer;
+}
+
+/* (Optional) ensure label text stays clickable and aligned */
+.consent-wrap{
+  display:flex; gap:12px; align-items:center;
+  padding:12px; border:1px dashed #b9d4ff; background:#f0f6ff; border-radius:12px;
+  cursor:pointer; user-select:none;
+}
+.consent-wrap span{ color:#143454; font-weight:600; line-height:1.35 }
+
+<link rel="icon" type="image/png" href="/assets/img/cmi-logo.png" />
+<link rel="apple-touch-icon" href="/assets/img/cmi-logo.png" />
+<meta property="og:image" content="/assets/img/cmi-logo.png" />
+<meta name="theme-color" content="#2EC4B6" />
+
+
+  </style>
+</head>
+<body>
+<!-- Header / Brand Bar -->
+<section class="brand-bar">
+  <a class="brand" href="#top" aria-label="Adventure Camp Home">
+    <picture>
+      <!-- WebP first (optional but recommended) -->
+      <source srcset="/assets/img/cmi-logo.webp" type="image/webp" />
+      <!-- Fallback PNG -->
+      <img
+        src="/assets/img/cmi-logo.png"
+        width="280"
+        height="280"
+        alt="CMI: Curiosity Meets Imagination—Adventure Camp"
+        loading="lazy"
+        decoding="async"
+      />
+    </picture>
+    <div class="brand-text">
+      <h1 class="brand-title">CMI</h1>
+      <p class="brand-tagline">Curiosity Meets Imagination</p>
+    </div>
+  </a>
+</section>
+
+  <!-- TOP BANNER -->
+  <div class="top-banner">🚨 Limited slots! Register early! 🚨</div>
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="wrap">
+      <span class="badge">🌊 Family-Friendly • 🧭 Guided • 🇸🇬 Singapore</span>
+      <h1>🏕️ 1 Night Adventure Camp @ East Coast Park, Fri 7 Nov</h1>
+      <p class="lead">An unforgettable seaside camp for young children — with <strong>BBQ dinner</strong> 🍢, night walk 🌙, beach games 🏖️ and a sunrise stretch 🌅. Safe, supervised and seriously fun.</p>
+      <p class="hero-info">📅 <strong>First Adventure Camp:</strong> <u>7 Nov 2025, 5:30 PM</u> • ⏰ Ends next day 11:00 AM • 📍 East Coast Park, Singapore</p>
+      <div class="cta">
+        <a href="#signup" class="btn">✨ Register Now</a>
+        <a href="#details" class="btn outline">📋 See Details</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap">
+
+    <!-- BENEFITS -->
+    <section id="benefits">
+      <h2>🌟 Why Parents Love This Camp</h2>
+      <div class="grid grid-3">
+        <div class="card">
+          <h3>💪 Resilience & Independence</h3>
+          <p class="k">Kids practice simple responsibilities (tents, mealtime, tidying) in a safe, guided setting.</p>
+        </div>
+        <div class="card">
+          <h3>🤝 Confidence & Teamwork</h3>
+          <p class="k">Games and shared tasks build communication, empathy and leadership.</p>
+        </div>
+        <div class="card">
+          <h3>🔭 Curiosity & Adventure</h3>
+          <p class="k">Night walk, nature spotting and open-ended play nurture a love for the outdoors.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ITINERARY -->
+    <section id="details">
+      <h2>🕘 Itinerary (5:00 PM – 11:00 AM)</h2>
+      <div class="grid grid-2">
+        <div class="card">
+          <h3>Day 1 — Evening & Camp Night</h3>
+          <div class="timeline">
+            <div class="row"><div class="time">5:00 PM</div><div class="note">Arrival, registration & tent setup (guided)</div></div>
+            <div class="row"><div class="time">5:45 PM</div><div class="note">Icebreakers & team games 🎲</div></div>
+            <div class="row"><div class="time">6:30 PM</div><div class="note">Beach walk & safety briefing 🛟</div></div>
+            <div class="row"><div class="time">7:00 PM</div><div class="note">BBQ dinner (kids help with simple prep) 🍔</div></div>
+            <div class="row"><div class="time">8:00 PM</div><div class="note">Story circle & marshmallow roast 🔥</div></div>
+            <div class="row"><div class="time">8:30 PM</div><div class="note">Guided night walk & stargazing (weather-permitting) ✨</div></div>
+            <div class="row"><div class="time">9:00 PM</div><div class="note">Wash-up & wind-down journaling 📝</div></div>
+            <div class="row"><div class="time">9:30 PM</div><div class="note">Lights out 🌙</div></div>
+          </div>
+        </div>
+        <div class="card">
+          <h3>Day 2 — Morning by the Sea</h3>
+          <div class="timeline">
+            <div class="row"><div class="time">6:30 AM</div><div class="note">Sunrise stretch & breathing 🌅</div></div>
+            <div class="row"><div class="time">7:15 AM</div><div class="note">Breakfast picnic 🧺</div></div>
+            <div class="row"><div class="time">8:15 AM</div><div class="note">Beach games & teamwork challenges 🏐</div></div>
+            <div class="row"><div class="time">9:45 AM</div><div class="note">Pack up, campsite clean-check ♻️</div></div>
+            <div class="row"><div class="time">10:15 AM</div><div class="note">Reflection, high-fives & certificate 🎖️</div></div>
+            <div class="row"><div class="time">11:00 AM</div><div class="note">Pick-up & goodbyes 👋</div></div>
+          </div>
+        </div>
+      </div>
+      <p class="k">Note: Activities/timings may shift slightly due to weather and park advisories. Safety first.</p>
+    </section>
+
+    <!-- INCLUDED -->
+    <section id="included">
+      <h2>✅ What’s Included</h2>
+      <div class="grid grid-3">
+        <div class="card"><strong>👩‍🏫 Experienced Facilitators</strong><p class="k">First-aid trained, child-safe ratios, age-appropriate activities.</p></div>
+        <div class="card"><strong>🍽️ Meals</strong><p class="k">BBQ dinner, breakfast picnic, drinking water.</p></div>
+        <div class="card"><strong>⛺ Gear Support</strong><p class="k">Shared camp equipment & lighting. (You’re welcome to bring your own tent.)</p></div>
+      </div>
+      <div style="margin-top:12px">
+        <span class="pill">Safe supervision</span><span class="pill">Seaside location</span><span class="pill">Certificate of completion</span>
+      </div>
+    </section>
+
+    <!-- PACKING -->
+    <section id="packing">
+      <h2>🎒 Packing List (Kid-Friendly)</h2>
+      <div class="card">
+        <ul class="list">
+          <li>Water bottle (labelled), light jacket, hat</li>
+          <li>Change of clothes, sleepwear, small towel, toiletries</li>
+          <li>Comfortable shoes/slippers, insect repellent, sunblock</li>
+          <li>Optional: personal tent/sleeping bag, favourite small soft toy</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- SAFETY -->
+    <section id="safety">
+      <h2>🛡️ Safety & Policies</h2>
+      <div class="grid grid-3">
+        <div class="card"><strong>Child Safety</strong><p class="k">Verified facilitators, headcounts every transition, dedicated rest area.</p></div>
+        <div class="card"><strong>Weather Plan</strong><p class="k">Wet-weather activities and sheltering plan; outdoor segments adjust as needed.</p></div>
+        <div class="card"><strong>Permissions & Health</strong><p class="k">Parent/guardian consent form and allergy info collected at registration.</p></div>
+      </div>
+    </section>
+
+    <!-- SIGNUP -->
+    <section id="signup">
+      <h2>📝 Register Your Child</h2>
+      <div class="card">
+        <!-- Hidden iframe target to avoid CORS response blocking -->
+        <iframe name="submission_iframe" id="submission_iframe" style="display:none"></iframe>
+
+        <form id="ecpCampForm" name="ecpCampForm"
+              method="POST"
+              action="https://script.google.com/macros/s/AKfycbypglM_7julf08TbLlMpEPbUHlfGLXwpGblxOCjxpkbN2aag7084l-SrHPMhPLpICEY/exec"
+              target="submission_iframe" autocomplete="on" novalidate>
+          <div class="two">
+            <div>
+              <label for="pname">Parent/Guardian Name</label>
+              <input id="pname" name="pname" required />
+            </div>
+            <div>
+              <label for="contact">Contact (Mobile/WhatsApp)</label>
+              <input id="contact" name="contact" required />
+            </div>
+          </div>
+          <div class="two">
+            <div>
+              <label for="email">Email</label>
+              <input id="email" type="email" name="email" required />
+            </div>
+            <div>
+              <!-- Removed date picker; keep hidden constant date for the sheet -->
+              <label>Camp Date</label>
+              <div class="k" style="padding:12px 0 0">📅 7 Nov 2025, 5:00 PM (to next day 11:00 AM)</div>
+              <input type="hidden" name="date" value="2025-11-07 17:00" />
+            </div>
+          </div>
+          <div class="two">
+            <div>
+              <label for="cname">Child’s Name</label>
+              <input id="cname" name="cname" required />
+            </div>
+            <div>
+              <label for="age">Child’s Age</label>
+              <select id="age" name="age" required>
+                <option value="">Select</option>
+                <option>5</option><option>6</option><option>7</option><option>8</option>
+                <option>9</option><option>10</option><option>11</option><option>12</option>
+              </select>
+            </div>
+          </div>
+
+          <label for="allergies">Allergies / Notes</label>
+          <textarea id="allergies" name="allergies" rows="3" placeholder="Allergies, dietary needs, any special considerations"></textarea>
+
+          <!-- Fully clickable consent (label wraps input + text) -->
+          <label class="consent-wrap">
+            <input id="consent" name="consent" type="checkbox" required />
+            <span>I am the parent/guardian and consent to my child’s participation.</span>
+          </label>
+
+          <!-- Hidden metadata -->
+          <input type="hidden" name="ua" id="ua">
+          <input type="hidden" name="pageurl" id="pageurl">
+          <!-- Honeypot -->
+          <input type="text" name="website" id="website" style="display:none" tabindex="-1" autocomplete="off">
+
+          <button class="btn" type="submit">Send Registration ✉️</button>
+          <p id="formMsg" class="msg hidden"></p>
+          <p class="k" id="formNote">Submitting won’t leave this page. You’ll see a confirmation here.</p>
+        </form>
+      </div>
+    </section>
+
+    <!-- CONTACT (as you specified earlier) -->
+    <section id="contact">
+      <h2>Questions?</h2>
+      <div class="card">
+        <p class="k">WhatsApp: <a href="https://wa.me/6588550100" target="_blank" rel="noopener">Me for more questions!</a> • Email: <a href="mailto:">me!</a></p>
+        <p class="k">© 2025  CMI - Curiosity Meets Imagination Pte Ltd. All rights reserved.</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- STICKY CTA -->
+  <div class="stickybar">
+    <a href="#signup" class="btn">Secure Your Child’s Spot ✨</a>
+  </div>
+
+  <script>
+    // Prefill metadata
+    document.getElementById('ua').value = navigator.userAgent;
+    document.getElementById('pageurl').value = location.href;
+
+    const form = document.getElementById('ecpCampForm');
+    const iframe = document.getElementById('submission_iframe');
+    const msgEl = document.getElementById('formMsg');
+    const noteEl = document.getElementById('formNote');
+
+    function showMsg(text, ok=true){
+      msgEl.textContent = text;
+      msgEl.classList.remove('hidden','err','ok');
+      msgEl.classList.add(ok ? 'ok' : 'err');
+    }
+
+    // Quick validation
+    function valid(){
+      const req = ['pname','contact','email','cname','age'];
+      for (const id of req){
+        const el = document.getElementById(id);
+        if (!el || !el.value){ el && el.focus(); showMsg('Please fill in all required fields.', false); return false; }
+      }
+      const consentEl = document.getElementById('consent');
+      if (!consentEl.checked){ showMsg('Please provide consent to proceed.', false); return false; }
+      const hp = document.getElementById('website');
+      if (hp && hp.value.trim() !== ''){ showMsg('Submission blocked (spam detected).', false); return false; }
+      return true;
+    }
+
+    form.addEventListener('submit', function(event){
+      if (!valid()) { event.preventDefault(); return; }
+      showMsg('Submitting your registration…', true);
+      noteEl.textContent = 'Processing… please wait a moment.';
+    });
+
+    // When the iframe loads, assume success
+    iframe.addEventListener('load', function(){
+      showMsg('Thanks! We’ve received your registration. We’ll confirm your slot shortly. ✅', true);
+      form.reset();
+      document.getElementById('ua').value = navigator.userAgent;
+      document.getElementById('pageurl').value = location.href;
+      noteEl.textContent = 'Submission received.';
+    });
+  </script>
+</body>
+</html>
