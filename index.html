@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>One Day • One Night Adventure Camp @ East Coast Park</title>
-  <meta name="description" content="Overnight kids camping at East Coast Park: BBQ dinner, beach games, night walk, sunrise stretch. 5pm–11am. Safe, guided and super fun!" />
+  <title>3 Day • 2 Night Adventure Camp @ Desaru Coast</title>
+  <meta name="description" content="Epic 3-day kids adventure at Desaru Coast, Malaysia: Hard Rock Hotel stay, unlimited Adventure Waterpark, beach games, night activities, and more. Safe, guided and unforgettable!" />
   <style>
     /* Brand Bar */
 .brand-bar {
@@ -77,7 +77,7 @@
 
     /* === Bright, friendly theme === */
     :root{
-      --bg:#f7fbfe;            /* updated per your request */
+      --bg:#f7fbfe;            
       --fg:#0e1b2b;
       --muted:#48607a;
       --brand:#1d4ed8;
@@ -164,41 +164,22 @@
     .stickybar{position:sticky;bottom:16px;display:flex;justify-content:center;z-index:10}
     .stickybar .btn{padding:16px 22px}
 
-
-    /* 1) Do NOT remove native appearance for checkboxes */
-input, select, textarea{
-  width:100%;
-  background:#fff;
-  border:1.5px solid var(--stroke);
-  color:var(--fg);
-  padding:12px;
-  border-radius:12px;
-  outline:none;
-  transition:border-color .15s, box-shadow .15s;
-  /* REMOVE these two lines from the generic rule (they break the checkbox):
-     -webkit-appearance:none;
-     appearance:none;
-  */
-}
-
-/* 2) Keep "no appearance" for text-like fields only (optional but tidy) */
+    /* Checkbox fixes */
 input[type="text"], input[type="email"], input[type="tel"], input[type="search"],
 input[type="number"], select, textarea{
   -webkit-appearance:none;
   appearance:none;
 }
 
-/* 3) Explicitly restore native checkbox visuals + accent color */
 .consent-wrap input[type="checkbox"]{
   -webkit-appearance: checkbox;
-  appearance: auto;              /* brings back the native ✓ */
-  width: 20px; height: 20px;     /* big enough to tap, can tweak 22–24px */
-  accent-color: var(--brand);    /* blue tick on modern browsers */
+  appearance: auto;
+  width: 20px; height: 20px;
+  accent-color: var(--brand);
   border: initial; background: initial;
   cursor: pointer;
 }
 
-/* (Optional) ensure label text stays clickable and aligned */
 .consent-wrap{
   display:flex; gap:12px; align-items:center;
   padding:12px; border:1px dashed #b9d4ff; background:#f0f6ff; border-radius:12px;
@@ -211,7 +192,6 @@ input[type="number"], select, textarea{
 <meta property="og:image" content="/assets/img/cmi-logo.png" />
 <meta name="theme-color" content="#2EC4B6" />
 
-
   </style>
 </head>
 <body>
@@ -219,9 +199,7 @@ input[type="number"], select, textarea{
 <section class="brand-bar">
   <a class="brand" href="#top" aria-label="Adventure Camp Home">
     <picture>
-      <!-- WebP first (optional but recommended) -->
       <source srcset="/assets/img/cmi-logo.webp" type="image/webp" />
-      <!-- Fallback PNG -->
       <img
         src="/assets/img/cmi-logo.png"
         width="350"
@@ -239,7 +217,7 @@ input[type="number"], select, textarea{
 </section>
 
   <!-- TOP BANNER -->
-  <div class="top-banner">🚨 Limited slots! Register early! 🚨</div>
+  <div class="top-banner">🚨 Limited slots! Register early for this epic Desaru adventure! 🚨</div>
 
   <!-- HERO -->
   <header class="hero">
@@ -253,9 +231,9 @@ input[type="number"], select, textarea{
         decoding="async"
       /></div>
       
-      <h1>1 Night Adventure Camp @ East Coast Park, Fri 21 Nov</h1>
-      <p class="lead">An unforgettable seaside camp 🏕️ for young children — with <strong>BBQ dinner</strong> 🍢, night walk 🌙, beach games 🏖️ and a sunrise stretch 🌅. Safe, supervised and seriously fun.</p>
-      <p class="hero-info">⏰ 5:30 PM - Ends next day 11:00 AM • 📍 East Coast Park, Singapore</p>
+      <h1>3 Day • 2 Night Adventure Camp @ Desaru Coast, Malaysia</h1>
+      <p class="lead">An epic beach & waterpark adventure 🏖️💦 for kids at Hard Rock Hotel Desaru Coast — unlimited Adventure Waterpark access, beach games, night activities, rock-star vibes 🎸 and lifelong memories. Fully guided, safe and super fun!</p>
+      <p class="hero-info">⏰ Check-in 28 Dec 2025 • Check-out 30 Dec 2025 • 📍 Desaru Coast, Johor, Malaysia</p>
       <div class="cta">
         <a href="#signup" class="btn">✨ Register Now</a>
         <a href="#details" class="btn outline">📋 See Details</a>
@@ -267,78 +245,88 @@ input[type="number"], select, textarea{
 
     <!-- BENEFITS -->
     <section id="benefits">
-      <h2>🌟 Why Parents Love This Camp</h2>
+      <h2>🌟 Why Parents Love This Desaru Adventure</h2>
       <div class="grid grid-3">
         <div class="card">
           <h3>💪 Resilience & Independence</h3>
-          <p class="k">Kids practice simple responsibilities (tents, mealtime, tidying) in a safe, guided setting.</p>
+          <p class="k">Kids navigate a new environment, manage daily routines, and try exciting activities in a safe, supportive setting.</p>
         </div>
         <div class="card">
           <h3>🤝 Confidence & Teamwork</h3>
-          <p class="k">Games and shared tasks build communication, empathy and leadership.</p>
+          <p class="k">Group games, waterpark challenges and shared adventures build friendship, communication and leadership skills.</p>
         </div>
         <div class="card">
           <h3>🔭 Curiosity & Adventure</h3>
-          <p class="k">Night walk, nature spotting and open-ended play nurture a love for the outdoors.</p>
+          <p class="k">Unlimited waterpark thrills, beach exploration and themed activities spark imagination and love for adventure.</p>
         </div>
       </div>
     </section>
 
     <!-- ITINERARY -->
     <section id="details">
-      <h2>🕘 Itinerary (5:30 PM – 11:00 AM)</h2>
+      <h2>🕘 Itinerary (28–30 Dec 2025)</h2>
       <div class="grid grid-2">
         <div class="card">
-          <h3>Day 1 — Evening & Camp Night</h3>
+          <h3>Day 1 — Arrival & Waterpark Fun</h3>
           <div class="timeline">
-            <div class="row"><div class="time">5:30 PM</div><div class="note">Arrival, registration & tent setup (guided)</div></div>
-            <div class="row"><div class="time">6:00 PM</div><div class="note">Icebreakers & team games 🎲</div></div>
-            <div class="row"><div class="time">6:30 PM</div><div class="note">Beach walk & safety briefing 🛟</div></div>
-            <div class="row"><div class="time">7:00 PM</div><div class="note">BBQ dinner (kids help with simple prep) 🍔</div></div>
-            <div class="row"><div class="time">8:00 PM</div><div class="note">Story circle & marshmallow roast 🔥</div></div>
-            <div class="row"><div class="time">8:30 PM</div><div class="note">Guided night walk & stargazing (weather-permitting) ✨</div></div>
-            <div class="row"><div class="time">9:00 PM</div><div class="note">Wash-up & wind-down journaling 📝</div></div>
-            <div class="row"><div class="time">9:30 PM</div><div class="note">Lights out 🌙</div></div>
+            <div class="row"><div class="time">2:00 PM</div><div class="note">Meet at pickup point (Singapore) or direct arrival at Hard Rock Hotel Desaru</div></div>
+            <div class="row"><div class="time">3:00 PM</div><div class="note">Hotel check-in & camp orientation 🎸</div></div>
+            <div class="row"><div class="time">4:00 PM</div><div class="note">Unlimited Adventure Waterpark opens — slides, wave pool & lazy river! 💦</div></div>
+            <div class="row"><div class="time">7:00 PM</div><div class="note">Group dinner at hotel restaurant 🍴</div></div>
+            <div class="row"><div class="time">8:30 PM</div><div class="note">Rock-star night games & campfire stories 🔥</div></div>
+            <div class="row"><div class="time">10:00 PM</div><div class="note">Lights out 🌙</div></div>
           </div>
         </div>
         <div class="card">
-          <h3>Day 2 — Morning by the Sea</h3>
+          <h3>Day 2 — Full Day Adventure</h3>
           <div class="timeline">
-            <div class="row"><div class="time">6:30 AM</div><div class="note">Sunrise stretch & breathing 🌅</div></div>
-            <div class="row"><div class="time">7:15 AM</div><div class="note">Breakfast picnic 🧺</div></div>
-            <div class="row"><div class="time">8:15 AM</div><div class="note">Beach games & teamwork challenges 🏐</div></div>
-            <div class="row"><div class="time">9:45 AM</div><div class="note">Pack up, campsite clean-check ♻️</div></div>
-            <div class="row"><div class="time">10:15 AM</div><div class="note">Reflection, high-fives & certificate 🎖️</div></div>
-            <div class="row"><div class="time">11:00 AM</div><div class="note">Pick-up & goodbyes 👋</div></div>
+            <div class="row"><div class="time">7:30 AM</div><div class="note">Hotel breakfast buffet 🥐</div></div>
+            <div class="row"><div class="time">9:00 AM</div><div class="note">Back to Adventure Waterpark — full day of thrills! 🌊</div></div>
+            <div class="row"><div class="time">12:30 PM</div><div class="note">Lunch at waterpark or hotel 🍔</div></div>
+            <div class="row"><div class="time">3:00 PM</div><div class="note">Beach games & sandcastle challenge 🏖️</div></div>
+            <div class="row"><div class="time">6:30 PM</div><div class="note">Themed dinner & kids talent show 🎤</div></div>
+            <div class="row"><div class="time">8:00 PM</div><div class="note">Movie night under the stars or hotel entertainment ✨</div></div>
+            <div class="row"><div class="time">10:00 PM</div><div class="note">Lights out 🌙</div></div>
           </div>
         </div>
       </div>
-      <p class="k">Note: Activities/timings may shift slightly due to weather and park advisories. Safety first.</p>
+      <div class="card" style="margin-top:18px">
+        <h3>Day 3 — Morning Fun & Goodbye</h3>
+        <div class="timeline">
+          <div class="row"><div class="time">7:30 AM</div><div class="note">Breakfast & final waterpark morning session 💦</div></div>
+          <div class="row"><div class="time">11:00 AM</div><div class="note">Hotel check-out, group reflection & certificate 🎖️</div></div>
+          <div class="row"><div class="time">12:00 PM</div><div class="note">Departure (coach back to Singapore or self-arranged)</div></div>
+        </div>
+      </div>
+      <p class="k">Note: Activities/timings may shift slightly due to weather or hotel scheduling. Safety always comes first.</p>
     </section>
 
     <!-- INCLUDED -->
     <section id="included">
       <h2>✅ What’s Included</h2>
       <div class="grid grid-3">
-        <div class="card"><strong>👩‍🏫 Experienced Facilitators</strong><p class="k">First-aid trained, child-safe ratios, age-appropriate activities.</p></div>
-        <div class="card"><strong>🍽️ Meals</strong><p class="k">BBQ dinner, breakfast picnic, drinking water.</p></div>
-        <div class="card"><strong>⛺ Gear Support</strong><p class="k">Shared camp equipment, BBQ tools, drone & lighting. (BYOT: You’re welcome to bring your own tent.)</p></div>
+        <div class="card"><strong>🏨 2 Nights at Hard Rock Hotel Desaru Coast</strong><p class="k">Family-friendly rooms with rock-star theming.</p></div>
+        <div class="card"><strong>💦 Unlimited Adventure Waterpark Access</strong><p class="k">All 3 days — one of Asia’s biggest waterparks!</p></div>
+        <div class="card"><strong>🍽️ Meals</strong><p class="k">Daily breakfast buffet, selected lunches & dinners.</p></div>
+        <div class="card"><strong>👩‍🏫 Experienced Facilitators</strong><p class="k">First-aid trained, excellent child ratios, full supervision.</p></div>
+        <div class="card"><strong>🚌 Transport Option</strong><p class="k">Optional coach transfer from Singapore (details upon registration).</p></div>
+        <div class="card"><strong>🎖️ Certificate & Memories</strong><p class="k">Completion certificate + group photos.</p></div>
       </div>
       <div style="margin-top:12px">
-        <span class="pill">Safe supervision</span><span class="pill">Seaside location</span><span class="pill">Certificate of completion</span>
-        <span class="badge">🌊 Family-Friendly • 🧭 Guided • 🇸🇬 Singapore</span>
+        <span class="pill">Unlimited waterpark</span><span class="pill">Beachfront resort</span><span class="pill">Fully guided</span>
+        <span class="badge">🌴 Desaru Coast • 🎸 Hard Rock Vibes • 🇲🇾 Malaysia</span>
       </div>
     </section>
 
     <!-- PACKING -->
     <section id="packing">
-      <h2>🎒 Packing List (Kid-Friendly)</h2>
+      <h2>🎒 Packing List</h2>
       <div class="card">
         <ul class="list">
-          <li>Water bottle (labelled), light jacket, hat</li>
-          <li>Change of clothes, sleepwear, small towel, toiletries</li>
-          <li>Comfortable shoes/slippers, insect repellent, sunblock</li>
-          <li>Optional: personal tent/sleeping bag, favourite small soft toy</li>
+          <li>Swimwear (at least 2 sets), rash guard, goggles, flip-flops</li>
+          <li>Comfortable clothes, light jacket, hat, sunscreen, insect repellent</li>
+          <li>Toiletries, towel, reusable water bottle (labelled)</li>
+          <li>Optional: favourite pool toy, book, or small soft toy for bedtime</li>
         </ul>
       </div>
     </section>
@@ -347,9 +335,9 @@ input[type="number"], select, textarea{
     <section id="safety">
       <h2>🛡️ Safety & Policies</h2>
       <div class="grid grid-3">
-        <div class="card"><strong>Child Safety</strong><p class="k">Verified facilitators, headcounts every transition, dedicated rest area.</p></div>
-        <div class="card"><strong>Weather Plan</strong><p class="k">Wet-weather activities and sheltering plan; outdoor segments adjust as needed.</p></div>
-        <div class="card"><strong>Permissions & Health</strong><p class="k">Parent/guardian consent form and allergy info collected at registration.</p></div>
+        <div class="card"><strong>Child Safety</strong><p class="k">Verified facilitators, constant headcounts, buddy system at waterpark.</p></div>
+        <div class="card"><strong>Water Safety</strong><p class="k">Lifeguards on duty + CMI staff supervision in waterpark areas.</p></div>
+        <div class="card"><strong>Health & Permissions</strong><p class="k">Allergy/medical info collected; parent consent required.</p></div>
       </div>
     </section>
 
@@ -357,7 +345,6 @@ input[type="number"], select, textarea{
     <section id="signup">
       <h2>📝 Register Your Child</h2>
       <div class="card">
-        <!-- Hidden iframe target to avoid CORS response blocking -->
         <iframe name="submission_iframe" id="submission_iframe" style="display:none"></iframe>
 
         <form id="ecpCampForm" name="ecpCampForm"
@@ -380,10 +367,9 @@ input[type="number"], select, textarea{
               <input id="email" type="email" name="email" required />
             </div>
             <div>
-              <!-- Removed date picker; keep hidden constant date for the sheet -->
-              <label>Camp Date</label>
-              <div class="k" style="padding:12px 0 0">📅 21 Nov 2025, 5:00 PM (to next day 11:00 AM)</div>
-              <input type="hidden" name="date" value="2025-11-07 17:00" />
+              <label>Camp Dates</label>
+              <div class="k" style="padding:12px 0 0">📅 28–30 Dec 2025 (3 Days • 2 Nights)</div>
+              <input type="hidden" name="date" value="2025-12-28 to 2025-12-30" />
             </div>
           </div>
           <div class="two">
@@ -395,25 +381,22 @@ input[type="number"], select, textarea{
               <label for="age">Child’s Age</label>
               <select id="age" name="age" required>
                 <option value="">Select</option>
-                <option>4 (A parent to stay over is Complusory)</option><option>5</option><option>6</option><option>7</option><option>8</option>
-                <option>9</option><option>10</option><option>11</option><option>12</option>
+                <option>5</option><option>6</option><option>7</option><option>8</option>
+                <option>9</option><option>10</option><option>11</option><option>12</option><option>13</option>
               </select>
             </div>
           </div>
 
-          <label for="allergies">Allergies / Notes / Alternative Proposed Date</label>
-          <textarea id="allergies" name="allergies" rows="3" placeholder="Allergies, dietary needs, any special considerations"></textarea>
+          <label for="allergies">Allergies / Medical Notes / Transport Preference</label>
+          <textarea id="allergies" name="allergies" rows="3" placeholder="Allergies, dietary restrictions, medical conditions, preference for coach transport from Singapore"></textarea>
 
-          <!-- Fully clickable consent (label wraps input + text) -->
           <label class="consent-wrap">
             <input id="consent" name="consent" type="checkbox" required />
-            <span>I am the parent/guardian and consent to my child’s participation.</span>
+            <span>I am the parent/guardian and consent to my child’s participation in this Desaru adventure camp.</span>
           </label>
 
-          <!-- Hidden metadata -->
           <input type="hidden" name="ua" id="ua">
           <input type="hidden" name="pageurl" id="pageurl">
-          <!-- Honeypot -->
           <input type="text" name="website" id="website" style="display:none" tabindex="-1" autocomplete="off">
 
           <button class="btn" type="submit">Register Interest Now</button>
@@ -423,12 +406,12 @@ input[type="number"], select, textarea{
       </div>
     </section>
 
-    <!-- CONTACT (as you specified earlier) -->
+    <!-- CONTACT -->
     <section id="contact">
-      <h2>Questions? We are looking for Volunteer Facilators too!</h2>
+      <h2>Questions? We are looking for Volunteer Facilitators too!</h2>
       <div class="card">
         <p class="k">WhatsApp: <a href="https://wa.me/6588550100" target="_blank" rel="noopener">for more questions!</a> • Email: <a href="mailto:">us!</a></p>
-        <p class="k">© 2025  CMI - Curiosity Meets Imagination Pte Ltd. All rights reserved.</p>
+        <p class="k">© 2025 CMI - Curiosity Meets Imagination Pte Ltd. All rights reserved.</p>
       </div>
     </section>
   </main>
@@ -439,7 +422,6 @@ input[type="number"], select, textarea{
   </div>
 
   <script>
-    // Prefill metadata
     document.getElementById('ua').value = navigator.userAgent;
     document.getElementById('pageurl').value = location.href;
 
@@ -454,7 +436,6 @@ input[type="number"], select, textarea{
       msgEl.classList.add(ok ? 'ok' : 'err');
     }
 
-    // Quick validation
     function valid(){
       const req = ['pname','contact','email','cname','age'];
       for (const id of req){
@@ -474,7 +455,6 @@ input[type="number"], select, textarea{
       noteEl.textContent = 'Processing… please wait a moment.';
     });
 
-    // When the iframe loads, assume success
     iframe.addEventListener('load', function(){
       showMsg('Thanks! We’ve received your registration. We’ll confirm your slot shortly. ✅', true);
       form.reset();
