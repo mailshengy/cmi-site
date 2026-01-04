@@ -193,6 +193,28 @@
     /* Sticky CTA */
     .stickybar{position:sticky;bottom:16px;display:flex;justify-content:center;z-index:10}
     .stickybar .btn{padding:16px 22px}
+
+    /* NEW: transport helper text */
+    .help{
+      margin-top:6px;
+      font-size:13px;
+      color:var(--muted);
+    }
+    .subcard{
+      margin-top:10px;
+      padding:12px;
+      border:1px solid var(--stroke);
+      border-radius:12px;
+      background:#fff;
+    }
+    .subgrid{
+      display:grid;
+      gap:12px;
+      grid-template-columns:1fr;
+    }
+    @media (min-width:700px){
+      .subgrid{grid-template-columns:1fr 1fr}
+    }
   </style>
 
   <link rel="icon" type="image/png" href="/assets/img/cmi-logo.png" />
@@ -367,7 +389,7 @@
         </p>
 
         <div class="gallery" aria-label="Hard Rock Hotel Desaru Coast room images">
-            <figure>
+          <figure>
             <img
               src="https://hotel.reservations.hardrock.com/shs-ngbe-image-resizer/images/hotel/2043/images/room/room_superior_double_01.png"
               alt="Hard Rock Hotel Desaru Coast Superior Double room view 01"
@@ -377,7 +399,7 @@
             />
             <figcaption>Superior Double • Room view 01</figcaption>
           </figure>
-          
+
           <figure>
             <img
               src="https://hotel.reservations.hardrock.com/shs-ngbe-image-resizer/images/hotel/2043/images/room/room_superior_double_02.png"
@@ -388,6 +410,7 @@
             />
             <figcaption>Superior Double • Room view 02</figcaption>
           </figure>
+
           <figure>
             <img
               src="https://hotel.reservations.hardrock.com/shs-ngbe-image-resizer/images/hotel/2043/images/room/room_superior_double_03.png"
@@ -409,13 +432,40 @@
       </div>
     </section>
 
-    <!-- DRIVING -->
+    <!-- DRIVING / TRANSPORT OPTIONS (UPDATED) -->
     <section id="driving">
-      <h2>🗺️ Driving Notes</h2>
+      <h2>🗺️ Transport Options</h2>
       <div class="card">
-        <p class="k"><strong>SG → Desaru:</strong> typically ~100–120 km after clearing checkpoints • <strong>Drive time:</strong> 1.5–2.5 hours (border dependent)</p>
-        <p class="k"><strong>Desaru → Bukit Indah (JB):</strong> allow extra time on Sunday</p>
-        <p class="k"><strong>Suggested route:</strong> After clearing Woodlands & JB checkpoints, take E22 (Senai-Desaru Expressway) towards Desaru/Pengerang. Use Waze/Google Maps for real-time updates.</p>
+        <p class="k"><strong>Default plan:</strong> self-drive (carpool where possible).</p>
+
+        <div class="subgrid" style="margin-top:12px">
+          <div class="subcard">
+            <strong>🚗 Option 1: Self-drive / Carpool</strong>
+            <p class="help">
+              If you can drive, indicate how many seats you can offer so we can match passengers.
+            </p>
+            <p class="k" style="margin:8px 0 0"><strong>SG → Desaru:</strong> typically ~100–120 km after clearing checkpoints • <strong>Drive time:</strong> 1.5–2.5 hours (border dependent)</p>
+            <p class="k"><strong>Desaru → Bukit Indah (JB):</strong> allow extra time on Sunday</p>
+            <p class="k"><strong>Suggested route:</strong> After clearing Woodlands & JB checkpoints, take E22 (Senai-Desaru Expressway) towards Desaru/Pengerang. Use Waze/Google Maps for real-time updates.</p>
+          </div>
+
+          <div class="subcard">
+            <strong>🚌 Option 2: Group-hired Van + Driver (for non-drivers)</strong>
+            <p class="help">
+              We can form a non-driver group and hire a van with driver for the full itinerary (SG → Desaru → JB → SG).
+              Good for those who prefer not to drive, or for mixed groups with kids.
+            </p>
+            <ul class="list">
+              <li>Pickup: Singapore (group meeting point)</li>
+              <li>Stops: meals, alpaca farm, hotel, JB activities (go-kart, supper, shopping)</li>
+              <li>Cost: split per pax, depends on van size + hours + border waiting</li>
+              <li>Seats are limited, so we’ll confirm once we have enough sign-ups</li>
+            </ul>
+            <p class="k" style="margin:10px 0 0">
+              Tip: If you choose van + driver, please be on time at meet points, as the driver is charged by time.
+            </p>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -482,10 +532,10 @@
           </div>
 
           <div class="card" style="box-shadow:none">
-            <strong>🛍️ Shopping Buffer</strong>
+            <strong>🚌 Van + Driver (if chosen)</strong>
             <p class="k" style="margin-top:6px">
-              <b>$0–$300+ / pax</b><br>
-              Optional, depends on how much you shop.
+              <b>Estimated $90–$220 / pax (TBC)</b><br>
+              Depends on number of pax sharing, van size, and hours (includes border waiting time).
             </p>
           </div>
 
@@ -529,7 +579,7 @@
       </div>
     </section>
 
-    <!-- SIGNUP -->
+    <!-- SIGNUP (UPDATED) -->
     <section id="signup">
       <h2>📝 Register Your Group</h2>
       <div class="card">
@@ -573,12 +623,32 @@
             </div>
           </div>
 
-          <label for="allergies">Notes (Suggest alternative dates, Allergies / Dietary / Vehicles / Sunday Option A or B)</label>
-          <textarea id="allergies" name="allergies" rows="3" placeholder="Allergies, dietary restrictions, number of adults, number of vehicles, Sunday plan: Option A stay over / Option B return late"></textarea>
+          <!-- NEW: Transport choice -->
+          <div class="two">
+            <div>
+              <label for="transport">Transport Preference</label>
+              <select id="transport" name="transport" required>
+                <option value="" selected disabled>Select one…</option>
+                <option value="Self-drive (I can drive)">Self-drive (I can drive)</option>
+                <option value="Carpool passenger (I need a seat)">Carpool passenger (I need a seat)</option>
+                <option value="Group-hired van + driver (non-driver option)">Group-hired van + driver (non-driver option)</option>
+              </select>
+              <div class="help" id="transportHelp">Pick what fits you. If you choose van + driver, we’ll contact you once the group has enough pax to confirm booking.</div>
+            </div>
+
+            <div>
+              <label for="seats">If driving: seats available for carpool (optional)</label>
+              <input id="seats" name="seats" placeholder="e.g., 2 seats, or leave blank" inputmode="numeric" />
+              <div class="help">Only needed if you selected “Self-drive”.</div>
+            </div>
+          </div>
+
+          <label for="allergies">Notes (Allergies / Dietary / Group size / Sunday Option A or B / Pick-up area if van)</label>
+          <textarea id="allergies" name="allergies" rows="3" placeholder="Allergies, dietary restrictions, number of adults, Sunday plan: Option A stay over / Option B return late, if van: pick-up area and any child seat needs"></textarea>
 
           <label class="consent-wrap">
             <input id="consent" name="consent" type="checkbox" required />
-            <span>I understand this is a self-drive group getaway and agree to follow the safety plan and meeting points.</span>
+            <span>I understand this is a group getaway. If I choose van + driver, I will follow meet-up timings and safety rules.</span>
           </label>
 
           <input type="hidden" name="ua" id="ua">
@@ -616,14 +686,28 @@
     const msgEl = document.getElementById('formMsg');
     const noteEl = document.getElementById('formNote');
 
+    const transportEl = document.getElementById('transport');
+    const seatsEl = document.getElementById('seats');
+
     function showMsg(text, ok=true){
       msgEl.textContent = text;
       msgEl.classList.remove('hidden','err','ok');
       msgEl.classList.add(ok ? 'ok' : 'err');
     }
 
+    function syncTransportUI(){
+      const v = transportEl.value || '';
+      const isDriver = v.includes('Self-drive');
+      seatsEl.disabled = !isDriver;
+      seatsEl.required = false;
+      if (!isDriver) seatsEl.value = '';
+    }
+
+    transportEl.addEventListener('change', syncTransportUI);
+    syncTransportUI();
+
     function valid(){
-      const req = ['pname','contact','email','cname','age'];
+      const req = ['pname','contact','email','cname','age','transport'];
       for (const id of req){
         const el = document.getElementById(id);
         if (!el || !el.value){
@@ -656,9 +740,9 @@
       form.reset();
       document.getElementById('ua').value = navigator.userAgent;
       document.getElementById('pageurl').value = location.href;
+      syncTransportUI();
       noteEl.textContent = 'Submission received.';
     });
   </script>
 </body>
 </html>
-```
