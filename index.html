@@ -1,3 +1,4 @@
+```html
 <!doctype html>
 <html lang="en">
 <head>
@@ -129,6 +130,36 @@
     }
     .option strong{display:block;margin-bottom:4px}
 
+    /* NEW: Image gallery */
+    .gallery{
+      display:grid;
+      gap:12px;
+      grid-template-columns:1fr;
+      margin-top:10px;
+    }
+    @media (min-width:820px){
+      .gallery{ grid-template-columns:repeat(3,1fr); }
+    }
+    .gallery figure{
+      margin:0;
+      border-radius:14px;
+      overflow:hidden;
+      border:1px solid var(--stroke);
+      background:#fff;
+      box-shadow:0 8px 18px rgba(0,56,146,.10);
+    }
+    .gallery img{
+      width:100%;
+      height:220px;
+      object-fit:cover;
+      display:block;
+    }
+    .gallery figcaption{
+      padding:10px 12px;
+      font-size:13px;
+      color:var(--muted);
+    }
+
     /* FORM */
     form label{display:block;font-size:14px;color:#274969;margin:8px 0 6px}
     input,select,textarea{
@@ -227,6 +258,7 @@
       <div class="cta">
         <a href="#signup" class="btn">✨ Register Now</a>
         <a href="#details" class="btn outline">📋 See Itinerary</a>
+        <a href="#rooms" class="btn outline">🛏️ Hotel Rooms</a>
         <a href="#budget" class="btn outline">💸 Rough Budget</a>
       </div>
 
@@ -285,7 +317,7 @@
             <div class="row"><div class="time">12:30 PM</div><div class="note">Lunch: waterpark or hotel 🍔</div></div>
             <div class="row"><div class="time">3:30 PM</div><div class="note">Optional split: kids beach games + adults café hop or quick massage (optional)</div></div>
             <div class="row"><div class="time">6:00 PM</div><div class="note">Sunset beach time + photos (everyone) 🏖️📸</div></div>
-            <div class="row"><div class="time">7:30 PM</div><div class="note">Themed dinner + mini fun segment (talent show / quiz / lucky draw)</div></div>
+            <div class="row"><div class="time">7:30 PM</div><div class="note">Themed dinner + mini fun segment (quiz / lucky draw)</div></div>
             <div class="row"><div class="time">9:30 PM</div><div class="note">Optional: couples/friends lounge time, mocktails, desserts</div></div>
             <div class="row"><div class="time">10:30 PM</div><div class="note">Rest 🌙 (Hard Rock Night 2 of 2)</div></div>
           </div>
@@ -325,6 +357,58 @@
       </div>
 
       <p class="k">Note: Activities/timings may shift due to traffic, weather, or group needs. Safety always first.</p>
+    </section>
+
+    <!-- ROOMS / HOTEL IMAGES -->
+    <section id="rooms">
+      <h2>🛏️ Hard Rock Hotel Desaru Coast: Room Preview</h2>
+      <div class="card">
+        <p class="k">
+          A quick look at the Superior Double room vibe. Actual layouts can differ by booking and room allocation.
+        </p>
+
+        <div class="gallery" aria-label="Hard Rock Hotel Desaru Coast room images">
+          <figure>
+            <img
+              src="https://hotel.reservations.hardrock.com/shs-ngbe-image-resizer/images/hotel/2043/images/room/room_superior_double_02.png"
+              alt="Hard Rock Hotel Desaru Coast Superior Double room view 02"
+              loading="lazy"
+              decoding="async"
+              referrerpolicy="no-referrer"
+            />
+            <figcaption>Superior Double • Room view 02</figcaption>
+          </figure>
+
+          <figure>
+            <img
+              src="https://hotel.reservations.hardrock.com/shs-ngbe-image-resizer/images/hotel/2043/images/room/room_superior_double_01.png"
+              alt="Hard Rock Hotel Desaru Coast Superior Double room view 01"
+              loading="lazy"
+              decoding="async"
+              referrerpolicy="no-referrer"
+            />
+            <figcaption>Superior Double • Room view 01</figcaption>
+          </figure>
+
+          <figure>
+            <img
+              src="https://hotel.reservations.hardrock.com/shs-ngbe-image-resizer/images/hotel/2043/images/room/room_superior_double_03.png"
+              alt="Hard Rock Hotel Desaru Coast Superior Double room view 03"
+              loading="lazy"
+              decoding="async"
+              referrerpolicy="no-referrer"
+            />
+            <figcaption>Superior Double • Room view 03</figcaption>
+          </figure>
+        </div>
+
+        <div style="margin-top:12px">
+          <span class="pill">Fri + Sat nights</span>
+          <span class="pill">Family-friendly</span>
+          <span class="pill">Couples friendly</span>
+          <span class="pill">Friends groups</span>
+        </div>
+      </div>
     </section>
 
     <!-- DRIVING -->
@@ -410,7 +494,7 @@
           <div class="card" style="box-shadow:none">
             <strong>📌 Suggested All-In Range</strong>
             <p class="k" style="margin-top:6px">
-              <b>$600-$800 / Couple, $1000-$1500  / Family, TBC </b><br>
+              <b>$800-$1000 / Twin Sharing, $1000-$1500 / Family, TBC</b><br>
               Excluding shopping, typical sharing + meals.
             </p>
           </div>
@@ -579,3 +663,4 @@
   </script>
 </body>
 </html>
+```
