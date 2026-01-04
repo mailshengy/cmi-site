@@ -3,71 +3,69 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>3 Day • 2 Night Adventure Camp @ Desaru Coast</title>
-  <meta name="description" content="Epic 3-day kids adventure at Desaru Coast, Malaysia: Self-drive family trip with Hard Rock Hotel stay, Desaru Alpaca Farm visit, unlimited Adventure Waterpark, epic seafood, beach fun, and more. Safe, guided and unforgettable!" />
+  <title>4 Day • 3 Night Adventure Camp @ Desaru + JB</title>
+  <meta name="description" content="Epic 4-day kids adventure in Johor: Self-drive family trip with 2 nights at Hard Rock Hotel Desaru Coast + 1 night near Bukit Indah (JB) for go-kart and JB fun. Alpaca Farm, unlimited Adventure Waterpark, seafood, beach games, and more." />
+
   <style>
     /* Brand Bar */
-.brand-bar {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 16px;
-  padding: 12px 16px;
-  background: #f7fbfe;               /* your chosen page bg */
-  border-bottom: 1px solid rgba(0,0,0,0.06);
-}
+    .brand-bar {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      padding: 12px 16px;
+      background: #f7fbfe;
+      border-bottom: 1px solid rgba(0,0,0,0.06);
+    }
 
-.brand {
-  display: inline-flex;
-  align-items: center;
-  gap: 14px;
-  text-decoration: none;
-}
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 14px;
+      text-decoration: none;
+    }
 
-.brand picture,
-.brand img {
-  display: block;
-  max-width: 120px;                    /* desktop logo size */
-  height: auto;
-}
+    .brand picture,
+    .brand img {
+      display: block;
+      max-width: 120px;
+      height: auto;
+    }
 
-.brand-text {
-  display: flex;
-  flex-direction: column;
-  line-height: 1.1;
-}
+    .brand-text {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.1;
+    }
 
-.brand-title {
-  margin: 0;
-  font-size: clamp(18px, 2.6vw, 26px);
-  font-weight: 800;
-  color: #c77739;                     /* deep teal to match logo */
-  letter-spacing: 0.2px;
-}
+    .brand-title {
+      margin: 0;
+      font-size: clamp(18px, 2.6vw, 26px);
+      font-weight: 800;
+      color: #c77739;
+      letter-spacing: 0.2px;
+    }
 
-.brand-tagline {
-  margin: 2px 0 0;
-  font-size: clamp(12px, 1.6vw, 14px);
-  color: #17282b;                      /* softer teal */
-  opacity: 0.9;
-}
+    .brand-tagline {
+      margin: 2px 0 0;
+      font-size: clamp(12px, 1.6vw, 14px);
+      color: #17282b;
+      opacity: 0.9;
+    }
 
-/* Mobile tweaks */
-@media (max-width: 640px) {
-  .brand picture,
-  .brand img { max-width: 68px; }      /* smaller logo on phones */
-  .brand-bar { padding: 10px 12px; }
-}
+    @media (max-width: 640px) {
+      .brand picture,
+      .brand img { max-width: 68px; }
+      .brand-bar { padding: 10px 12px; }
+    }
 
-/* Optional: sticky header */
-.sticky .brand-bar {
-  position: sticky;
-  top: 0;
-  z-index: 50;
-  backdrop-filter: saturate(1.2) blur(6px);
-  background: rgba(247, 251, 254, 0.9);
-}
-
+    .sticky .brand-bar {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      backdrop-filter: saturate(1.2) blur(6px);
+      background: rgba(247, 251, 254, 0.9);
+    }
 
     /* === Global reset / layout fixes === */
     *,*::before,*::after{box-sizing:border-box}
@@ -77,7 +75,7 @@
 
     /* === Bright, friendly theme === */
     :root{
-      --bg:#f7fbfe;            
+      --bg:#f7fbfe;
       --fg:#0e1b2b;
       --muted:#48607a;
       --brand:#1d4ed8;
@@ -103,12 +101,14 @@
 
     /* HERO */
     .hero{
-      background: linear-gradient(180deg,#eef6ff 0%,#fff 65%), radial-gradient(900px 500px at 5% -5%, rgba(29,78,216,.15), transparent 55%), radial-gradient(900px 500px at 95% 0%, rgba(6,182,212,.15), transparent 55%);
+      background: linear-gradient(180deg,#eef6ff 0%,#fff 65%),
+        radial-gradient(900px 500px at 5% -5%, rgba(29,78,216,.15), transparent 55%),
+        radial-gradient(900px 500px at 95% 0%, rgba(6,182,212,.15), transparent 55%);
       padding:48px 24px 36px;text-align:center;border-bottom:1px solid var(--stroke)
     }
     .badge{display:inline-block;background:var(--chip);border:1px solid var(--stroke);padding:6px 10px;border-radius:999px;color:#19416b;font-size:13px;letter-spacing:.2px}
     h1{font-size:clamp(32px,5vw,54px);margin:16px 0 10px}
-    .lead{font-size:clamp(16px,2.6vw,20px);color:#274969;max-width:820px;margin:0 auto 18px}
+    .lead{font-size:clamp(16px,2.6vw,20px);color:#274969;max-width:880px;margin:0 auto 18px}
     .hero-info{margin-top:8px;color:#1c3552}
     .cta{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:8px}
     .btn{background:linear-gradient(90deg,var(--brand),var(--accent));border:none;color:#fff;padding:14px 20px;border-radius:12px;font-weight:700;cursor:pointer;box-shadow:var(--shadow)}
@@ -130,27 +130,41 @@
     .timeline{margin-top:8px}
     .row{display:flex;gap:12px;padding:12px;border-left:4px solid var(--brand);margin-left:6px;background:#f6faff;border:1px solid var(--stroke);border-radius:12px}
     .row+.row{margin-top:8px}
-    .time{min-width:88px;color:#0f3fd6;font-weight:800}
+    .time{min-width:104px;color:#0f3fd6;font-weight:800}
     .note{color:#1c3552}
+
+    /* OPTION CALLOUT */
+    .option{
+      margin-top:12px;
+      padding:12px;
+      border-radius:12px;
+      border:1px solid var(--stroke);
+      background:#ffffff;
+    }
+    .option strong{display:block;margin-bottom:4px}
 
     /* FORM — alignment + cross-browser normalization */
     form label{display:block;font-size:14px;color:#274969;margin:8px 0 6px}
     input,select,textarea{
       width:100%;background:#fff;border:1.5px solid var(--stroke);color:var(--fg);
       padding:12px;border-radius:12px;outline:none;transition:border-color .15s, box-shadow .15s;
-      -webkit-appearance:none;appearance:none; /* iOS Safari */
+      -webkit-appearance:none;appearance:none;
     }
     input:focus,select:focus,textarea:focus{border-color:#9ac2ff;box-shadow:0 0 0 4px rgba(29,78,216,.12)}
     .two{display:grid;grid-template-columns:1fr;gap:16px}
     @media (min-width:700px){.two{grid-template-columns:1fr 1fr}}
 
-    /* Consent row — fully clickable label wrapper */
+    /* Consent row */
     .consent-wrap{
       display:flex;gap:12px;align-items:center;padding:12px;border:1px dashed #b9d4ff;background:#f0f6ff;border-radius:12px;margin-top:6px;
-      cursor:pointer; user-select:none; position:relative; z-index:0;
+      cursor:pointer; user-select:none;
     }
     .consent-wrap input[type="checkbox"]{
-      width:24px;height:24px;accent-color:var(--brand);flex:0 0 auto;cursor:pointer;
+      -webkit-appearance: checkbox;
+      appearance: auto;
+      width: 20px; height: 20px;
+      accent-color: var(--brand);
+      cursor: pointer;
     }
     .consent-wrap span{color:#143454;font-weight:600;line-height:1.35}
 
@@ -163,81 +177,69 @@
     /* Sticky CTA */
     .stickybar{position:sticky;bottom:16px;display:flex;justify-content:center;z-index:10}
     .stickybar .btn{padding:16px 22px}
-
-    /* Checkbox fixes */
-input[type="text"], input[type="email"], input[type="tel"], input[type="search"],
-input[type="number"], select, textarea{
-  -webkit-appearance:none;
-  appearance:none;
-}
-
-.consent-wrap input[type="checkbox"]{
-  -webkit-appearance: checkbox;
-  appearance: auto;
-  width: 20px; height: 20px;
-  accent-color: var(--brand);
-  border: initial; background: initial;
-  cursor: pointer;
-}
-
-.consent-wrap{
-  display:flex; gap:12px; align-items:center;
-  padding:12px; border:1px dashed #b9d4ff; background:#f0f6ff; border-radius:12px;
-  cursor:pointer; user-select:none;
-}
-.consent-wrap span{ color:#143454; font-weight:600; line-height:1.35 }
-
-<link rel="icon" type="image/png" href="/assets/img/cmi-logo.png" />
-<link rel="apple-touch-icon" href="/assets/img/cmi-logo.png" />
-<meta property="og:image" content="/assets/img/cmi-logo.png" />
-<meta name="theme-color" content="#2EC4B6" />
-
   </style>
+
+  <link rel="icon" type="image/png" href="/assets/img/cmi-logo.png" />
+  <link rel="apple-touch-icon" href="/assets/img/cmi-logo.png" />
+  <meta property="og:image" content="/assets/img/cmi-logo.png" />
+  <meta name="theme-color" content="#2EC4B6" />
 </head>
+
 <body>
-<!-- Header / Brand Bar -->
-<section class="brand-bar">
-  <a class="brand" href="#top" aria-label="Adventure Camp Home">
-    <picture>
-      <source srcset="/assets/img/cmi-logo.webp" type="image/webp" />
-      <img
-        src="/assets/img/cmi-logo.png"
-        width="350"
-        height="350"
-        alt="CMI: Curiosity Meets Imagination—Adventure Camp"
-        loading="lazy"
-        decoding="async"
-      />
-    </picture>
-    <div class="brand-text">
-      <h1 class="brand-title">CMI Kids Club</h1>
-      <p class="brand-tagline">Curiosity Meets Imagination</p>
-    </div>
-  </a>
-</section>
+  <!-- Header / Brand Bar -->
+  <section class="brand-bar">
+    <a class="brand" href="#top" aria-label="Adventure Camp Home">
+      <picture>
+        <source srcset="/assets/img/cmi-logo.webp" type="image/webp" />
+        <img
+          src="/assets/img/cmi-logo.png"
+          width="350"
+          height="350"
+          alt="CMI: Curiosity Meets Imagination—Adventure Camp"
+          loading="lazy"
+          decoding="async"
+        />
+      </picture>
+      <div class="brand-text">
+        <h1 class="brand-title">CMI Kids Club</h1>
+        <p class="brand-tagline">Curiosity Meets Imagination</p>
+      </div>
+    </a>
+  </section>
 
   <!-- TOP BANNER -->
-  <div class="top-banner">🚨 Limited slots! Register early for this epic self-drive Desaru family adventure! 🚨</div>
+  <div class="top-banner">🚨 Limited slots! Register early for this epic Desaru + JB self-drive family adventure! 🚨</div>
 
   <!-- HERO -->
-  <header class="hero">
+  <header class="hero" id="top">
     <div class="wrap">
-      <div><img
-        src="/assets/img/cmi-logo.webp"
-        width="350"
-        height="350"
-        alt="CMI: Curiosity Meets Imagination—Adventure Camp"
-        loading="lazy"
-        decoding="async"
-      /></div>
-      
-      <h1>3 Day • 2 Night Adventure Camp @ Desaru Coast, Malaysia</h1>
-      <p class="lead">A thrilling self-drive family beach adventure 🏖️💦🐪 at Hard Rock Hotel Desaru Coast — Desaru Alpaca Farm petting zoo, unlimited Adventure Waterpark, epic seafood feasts, beach games, rock-star vibes 🎸 and unforgettable memories. Fully guided activities, safe and super fun!</p>
-      <p class="hero-info">⏰ Depart 28 Dec 2025 (early morning) • Return 30 Dec 2025 • 📍 Desaru Coast, Johor, Malaysia</p>
+      <div>
+        <img
+          src="/assets/img/cmi-logo.webp"
+          width="350"
+          height="350"
+          alt="CMI: Curiosity Meets Imagination—Adventure Camp"
+          loading="lazy"
+          decoding="async"
+        />
+      </div>
+
+      <h1>4 Day • 3 Night Adventure Camp @ Desaru Coast + JB</h1>
+      <p class="lead">
+        A thrilling self-drive family adventure in Johor, Malaysia, with 2 nights at Hard Rock Hotel Desaru Coast (Fri + Sat),
+        plus 1 night near Bukit Indah (Sun) for go-kart and JB fun. Includes Desaru Alpaca Farm, unlimited Adventure Waterpark,
+        beach games, epic seafood, and unforgettable memories.
+      </p>
+
+      <p class="hero-info">⏰ Depart 12 Jun 2026 (Fri, early morning) • Return 15 Jun 2026 (Mon) • 📍 Desaru Coast + Johor Bahru (Bukit Indah)</p>
+
       <div class="cta">
         <a href="#signup" class="btn">✨ Register Now</a>
-        <a href="#details" class="btn outline">📋 See Details</a>
+        <a href="#details" class="btn outline">📋 See Itinerary</a>
       </div>
+      <p class="k" style="max-width:900px;margin:14px auto 0">
+        Sunday plan includes an optional choice: return late Sunday night, or stay over near Bukit Indah and return on Monday (recommended for an easier drive).
+      </p>
     </div>
   </header>
 
@@ -245,78 +247,97 @@ input[type="number"], select, textarea{
 
     <!-- BENEFITS -->
     <section id="benefits">
-      <h2>🌟 Why Families Love This Desaru Adventure</h2>
+      <h2>🌟 Why Families Love This Adventure</h2>
       <div class="grid grid-3">
         <div class="card">
           <h3>💪 Resilience & Independence</h3>
-          <p class="k">Kids explore new places, interact with animals, and enjoy exciting activities in a safe, supportive environment.</p>
+          <p class="k">Kids explore new places, interact with animals, and try new challenges in a safe, supportive environment.</p>
         </div>
         <div class="card">
           <h3>🤝 Confidence & Teamwork</h3>
-          <p class="k">Animal feeding, waterpark challenges, and group games build friendships and skills.</p>
+          <p class="k">Group games, waterpark missions, and shared adventures strengthen friendships and social skills.</p>
         </div>
         <div class="card">
-          <h3>🔭 Curiosity & Adventure</h3>
-          <p class="k">Alpaca farm visits, waterpark thrills, and beach exploration spark wonder and love for nature.</p>
+          <h3>🔭 Curiosity & Exploration</h3>
+          <p class="k">Animals, beach nature walks, and new city experiences keep curiosity alive throughout the trip.</p>
         </div>
       </div>
     </section>
 
     <!-- ITINERARY -->
     <section id="details">
-      <h2>🕘 Itinerary (28–30 Dec 2025)</h2>
+      <h2>🕘 Itinerary (12–15 Jun 2026)</h2>
+
       <div class="grid grid-2">
         <div class="card">
-          <h3>Day 1 — Early Start & Animal Adventure</h3>
+          <h3>Day 1 (Fri, 12 Jun) — Travel + Alpaca Farm + Check-in</h3>
           <div class="timeline">
             <div class="row"><div class="time">7:00 AM</div><div class="note">Self-drive departure from Singapore (Woodlands Checkpoint)</div></div>
-            <div class="row"><div class="time">9:30 AM</div><div class="note">Dim sum breakfast stop en route 🥟</div></div>
-            <div class="row"><div class="time">11:00 AM</div><div class="note">Arrive Desaru Alpaca Farm — guided tour, animal petting & feeding 🦙🐰</div></div>
-            <div class="row"><div class="time">2:00 PM</div><div class="note">Hotel check-in at Hard Rock Hotel Desaru Coast 🎸</div></div>
-            <div class="row"><div class="time">3:00 PM</div><div class="note">Free time: Adventure Waterpark or relax 💦</div></div>
-            <div class="row"><div class="time">7:00 PM</div><div class="note">Epic seafood dinner at local restaurant (e.g., Jade Garden or Nelayan) 🦞🍤</div></div>
-            <div class="row"><div class="time">9:00 PM</div><div class="note">Rock-star night games or hotel entertainment ✨</div></div>
+            <div class="row"><div class="time">9:30 AM</div><div class="note">Breakfast stop en route 🥟</div></div>
+            <div class="row"><div class="time">11:00 AM</div><div class="note">Desaru Alpaca Farm: guided tour + animal feeding 🦙🐰</div></div>
+            <div class="row"><div class="time">2:00 PM</div><div class="note">Check-in: Hard Rock Hotel Desaru Coast 🎸 (Night 1 of 2)</div></div>
+            <div class="row"><div class="time">3:00 PM</div><div class="note">Waterpark warm-up session or pool time 💦</div></div>
+            <div class="row"><div class="time">7:00 PM</div><div class="note">Seafood dinner (group) 🦞🍤</div></div>
+            <div class="row"><div class="time">9:00 PM</div><div class="note">Night games or hotel entertainment ✨</div></div>
             <div class="row"><div class="time">10:00 PM</div><div class="note">Lights out 🌙</div></div>
           </div>
         </div>
+
         <div class="card">
-          <h3>Day 2 — Full Day Waterpark & Beach Fun</h3>
+          <h3>Day 2 (Sat, 13 Jun) — Full Day Waterpark + Beach Fun</h3>
           <div class="timeline">
             <div class="row"><div class="time">7:30 AM</div><div class="note">Hotel breakfast buffet 🥐</div></div>
-            <div class="row"><div class="time">9:00 AM</div><div class="note">Back to Adventure Waterpark — full day of thrills! 🌊</div></div>
-            <div class="row"><div class="time">12:30 PM</div><div class="note">Lunch at waterpark or hotel 🍔</div></div>
-            <div class="row"><div class="time">3:00 PM</div><div class="note">Beach games & sandcastle challenge 🏖️</div></div>
-            <div class="row"><div class="time">6:30 PM</div><div class="note">Themed dinner & kids talent show 🎤</div></div>
-            <div class="row"><div class="time">8:00 PM</div><div class="note">Movie night under the stars or hotel entertainment ✨</div></div>
-            <div class="row"><div class="time">10:00 PM</div><div class="note">Lights out 🌙</div></div>
+            <div class="row"><div class="time">9:00 AM</div><div class="note">Adventure Waterpark: full day thrills 🌊</div></div>
+            <div class="row"><div class="time">12:30 PM</div><div class="note">Lunch: waterpark or hotel 🍔</div></div>
+            <div class="row"><div class="time">3:00 PM</div><div class="note">Beach games + sandcastle challenge 🏖️</div></div>
+            <div class="row"><div class="time">6:30 PM</div><div class="note">Themed dinner + kids mini showcase 🎤</div></div>
+            <div class="row"><div class="time">8:00 PM</div><div class="note">Movie night or hotel show ✨</div></div>
+            <div class="row"><div class="time">10:00 PM</div><div class="note">Lights out 🌙 (Hard Rock Night 2 of 2)</div></div>
           </div>
         </div>
       </div>
+
       <div class="card" style="margin-top:18px">
-        <h3>Day 3 — Morning Fun & Return via JB</h3>
+        <h3>Day 3 (Sun, 14 Jun) — Desaru Morning + JB (Bukit Indah) Go-Kart Night</h3>
         <div class="timeline">
-          <div class="row"><div class="time">7:30 AM</div><div class="note">Breakfast & final waterpark morning session 💦</div></div>
-          <div class="row"><div class="time">11:00 AM</div><div class="note">Hotel check-out, group reflection & certificate 🎖️</div></div>
-          <div class="row"><div class="time">12:00 PM</div><div class="note">Self-drive departure — stop in Johor Bahru for grocery shopping, epic food spots & early dinner (e.g., AEON Tebrau City or City Square Mall) 🛒🍲</div></div>
-          <div class="row"><div class="time">Evening</div><div class="note">Head back to Singapore 👋</div></div>
+          <div class="row"><div class="time">7:30 AM</div><div class="note">Breakfast + final waterpark morning session 💦</div></div>
+          <div class="row"><div class="time">11:00 AM</div><div class="note">Check-out + group reflection + certificate 🎖️</div></div>
+          <div class="row"><div class="time">12:00 PM</div><div class="note">Drive to Johor Bahru (Bukit Indah area)</div></div>
+          <div class="row"><div class="time">2:30 PM</div><div class="note">Lunch + JB activities (shopping, snacks, family-friendly spots) 🛒</div></div>
+          <div class="row"><div class="time">6:00 PM</div><div class="note">Go-kart session (pre-booking recommended) 🏎️</div></div>
+          <div class="row"><div class="time">8:00 PM</div><div class="note">Dinner near Bukit Indah (easy, family-friendly)</div></div>
+        </div>
+
+        <div class="option">
+          <strong>Option A (Recommended): Stay over near Bukit Indah (Night 3 of 3)</strong>
+          <div class="k">Less rushing, easier drive, kids rest well. Return Monday morning or after lunch.</div>
+        </div>
+        <div class="option">
+          <strong>Option B: Return late Sunday night to Singapore</strong>
+          <div class="k">After go-kart + dinner, drive back and clear border at night.</div>
         </div>
       </div>
-      <p class="k">Note: Activities/timings may shift slightly due to traffic, weather or group needs. Safety always first.</p>
+
+      <div class="card" style="margin-top:18px">
+        <h3>Day 4 (Mon, 15 Jun) — JB Breakfast + Return</h3>
+        <div class="timeline">
+          <div class="row"><div class="time">9:00 AM</div><div class="note">Breakfast near Bukit Indah (quick and easy)</div></div>
+          <div class="row"><div class="time">10:30 AM</div><div class="note">Optional last JB stop: groceries, snacks, short activity</div></div>
+          <div class="row"><div class="time">12:00 PM</div><div class="note">Drive back to Singapore (aim off-peak if possible) 👋</div></div>
+        </div>
+        <p class="k" style="margin-top:10px">Note: If choosing Option B (return Sunday night), Day 4 becomes a rest day at home.</p>
+      </div>
+
+      <p class="k">Note: Activities/timings may shift due to traffic, weather, or group needs. Safety always first.</p>
     </section>
 
     <!-- DRIVING MAP SECTION -->
     <section id="driving">
-      <h2>🗺️ Driving Directions: Singapore Woodlands Checkpoint to Hard Rock Hotel Desaru Coast</h2>
+      <h2>🗺️ Driving Notes: Singapore → Desaru → JB (Bukit Indah)</h2>
       <div class="card">
-        <p class="k"><strong>Distance:</strong> ~100-120 km • <strong>Drive time:</strong> 1.5–2.5 hours (depending on border traffic)</p>
-        <p class="k"><strong>Recommended Route:</strong> After clearing Woodlands & JB checkpoints, take the E22 (Senai-Desaru Expressway) east towards Desaru/Pengerang. Follow signs to Bandar Penawar/Desaru Coast.</p>
-        <p class="k">Use Waze/Google Maps for real-time navigation. Early departure recommended to avoid peak traffic!</p>
-        <p class="k">Visual route examples:</p>
-        <ul class="list">
-          <li>Standard expressway route map</li>
-          <li>Detailed driving path overview</li>
-          <li>Alternative scenic route snapshot</li>
-        </ul>
+        <p class="k"><strong>SG → Desaru:</strong> typically ~100–120 km after clearing checkpoints • <strong>Drive time:</strong> 1.5–2.5 hours (border dependent)</p>
+        <p class="k"><strong>Desaru → Bukit Indah (JB):</strong> allow extra time for weekend traffic</p>
+        <p class="k"><strong>Suggested route:</strong> After clearing Woodlands & JB checkpoints, take E22 (Senai-Desaru Expressway) towards Desaru/Pengerang. Use Waze/Google Maps for real-time updates.</p>
       </div>
     </section>
 
@@ -324,16 +345,16 @@ input[type="number"], select, textarea{
     <section id="included">
       <h2>✅ What’s Included</h2>
       <div class="grid grid-3">
-        <div class="card"><strong>🏨 2 Nights at Hard Rock Hotel Desaru Coast</strong><p class="k">Family-friendly rooms with rock-star theming.</p></div>
-        <div class="card"><strong>💦 Unlimited Adventure Waterpark Access</strong><p class="k">During stay — Asia’s biggest wave pools & slides!</p></div>
+        <div class="card"><strong>🏨 2 Nights at Hard Rock Hotel Desaru Coast</strong><p class="k">Fri + Sat nights.</p></div>
+        <div class="card"><strong>🏨 1 Night near Bukit Indah (JB)</strong><p class="k">Sun night for go-kart + JB activities (Option A).</p></div>
+        <div class="card"><strong>💦 Waterpark Access</strong><p class="k">During Desaru stay.</p></div>
         <div class="card"><strong>🐪 Desaru Alpaca Farm Visit</strong><p class="k">Guided tour & animal interactions.</p></div>
-        <div class="card"><strong>🍽️ Selected Meals</strong><p class="k">Hotel breakfasts, group dinners (including epic seafood on Day 1).</p></div>
-        <div class="card"><strong>👩‍🏫 Experienced Facilitators</strong><p class="k">First-aid trained, excellent child ratios for guided activities.</p></div>
+        <div class="card"><strong>🍽️ Selected Meals</strong><p class="k">Hotel breakfasts + planned group dinners.</p></div>
         <div class="card"><strong>🎖️ Certificate & Memories</strong><p class="k">Completion certificate + group photos.</p></div>
       </div>
       <div style="margin-top:12px">
-        <span class="pill">Self-drive flexibility</span><span class="pill">Animal petting zoo</span><span class="pill">Unlimited waterpark</span><span class="pill">Epic seafood</span>
-        <span class="badge">🌴 Desaru Coast • 🎸 Hard Rock Vibes • 🇲🇾 Malaysia</span>
+        <span class="pill">Self-drive flexibility</span><span class="pill">Animals</span><span class="pill">Waterpark</span><span class="pill">Desaru beach</span><span class="pill">JB go-kart night</span>
+        <span class="badge">🌴 Desaru • 🎸 Hard Rock • 🏎️ JB Bukit Indah</span>
       </div>
     </section>
 
@@ -345,7 +366,7 @@ input[type="number"], select, textarea{
           <li>Swimwear (multiple sets), rash guard, goggles, flip-flops</li>
           <li>Comfortable clothes, light jacket, hat, sunscreen, insect repellent</li>
           <li>Toiletries, towel, reusable water bottle (labelled)</li>
-          <li>Cash/cards for tolls, meals outside hotel, and JB shopping</li>
+          <li>Cash/cards for tolls, meals outside hotel, JB shopping</li>
           <li>Optional: favourite pool toy, book, or small soft toy for bedtime</li>
         </ul>
       </div>
@@ -355,8 +376,8 @@ input[type="number"], select, textarea{
     <section id="safety">
       <h2>🛡️ Safety & Policies</h2>
       <div class="grid grid-3">
-        <div class="card"><strong>Child Safety</strong><p class="k">Verified facilitators, constant headcounts, buddy system.</p></div>
-        <div class="card"><strong>Water & Animal Safety</strong><p class="k">Lifeguards + supervision; guided interactions at farm.</p></div>
+        <div class="card"><strong>Child Safety</strong><p class="k">Headcounts, buddy system, parent/guardian supervision for self-drive segments.</p></div>
+        <div class="card"><strong>Water & Activity Safety</strong><p class="k">Follow lifeguard rules; clear meeting points; hydration breaks.</p></div>
         <div class="card"><strong>Health & Permissions</strong><p class="k">Allergy/medical info collected; parent consent required.</p></div>
       </div>
     </section>
@@ -381,6 +402,7 @@ input[type="number"], select, textarea{
               <input id="contact" name="contact" required />
             </div>
           </div>
+
           <div class="two">
             <div>
               <label for="email">Email</label>
@@ -388,10 +410,11 @@ input[type="number"], select, textarea{
             </div>
             <div>
               <label>Camp Dates</label>
-              <div class="k" style="padding:12px 0 0">📅 28–30 Dec 2025 (3 Days • 2 Nights)</div>
-              <input type="hidden" name="date" value="2025-12-28 to 2025-12-30" />
+              <div class="k" style="padding:12px 0 0">📅 12–15 Jun 2026 (4 Days • 3 Nights)</div>
+              <input type="hidden" name="date" value="2026-06-12 to 2026-06-15" />
             </div>
           </div>
+
           <div class="two">
             <div>
               <label for="cname">Child’s Name(s)</label>
@@ -404,11 +427,11 @@ input[type="number"], select, textarea{
           </div>
 
           <label for="allergies">Allergies / Medical Notes / Additional Info</label>
-          <textarea id="allergies" name="allergies" rows="3" placeholder="Allergies, dietary restrictions, medical conditions, number of adults/vehicles"></textarea>
+          <textarea id="allergies" name="allergies" rows="3" placeholder="Allergies, dietary restrictions, medical conditions, number of adults/vehicles, preferred Option A or B for Sunday night"></textarea>
 
           <label class="consent-wrap">
             <input id="consent" name="consent" type="checkbox" required />
-            <span>I am the parent/guardian and consent to my child(ren)’s participation in this Desaru adventure camp.</span>
+            <span>I am the parent/guardian and consent to my child(ren)’s participation in this Desaru + JB adventure camp.</span>
           </label>
 
           <input type="hidden" name="ua" id="ua">
@@ -427,7 +450,7 @@ input[type="number"], select, textarea{
       <h2>Questions? We are looking for Volunteer Facilitators too!</h2>
       <div class="card">
         <p class="k">WhatsApp: <a href="https://wa.me/6588550100" target="_blank" rel="noopener">for more questions!</a> • Email: <a href="mailto:">us!</a></p>
-        <p class="k">© 2025 CMI - Curiosity Meets Imagination Pte Ltd. All rights reserved.</p>
+        <p class="k">© 2026 CMI - Curiosity Meets Imagination Pte Ltd. All rights reserved.</p>
       </div>
     </section>
   </main>
@@ -456,12 +479,22 @@ input[type="number"], select, textarea{
       const req = ['pname','contact','email','cname','age'];
       for (const id of req){
         const el = document.getElementById(id);
-        if (!el || !el.value){ el && el.focus(); showMsg('Please fill in all required fields.', false); return false; }
+        if (!el || !el.value){
+          if (el) el.focus();
+          showMsg('Please fill in all required fields.', false);
+          return false;
+        }
       }
       const consentEl = document.getElementById('consent');
-      if (!consentEl.checked){ showMsg('Please provide consent to proceed.', false); return false; }
+      if (!consentEl.checked){
+        showMsg('Please provide consent to proceed.', false);
+        return false;
+      }
       const hp = document.getElementById('website');
-      if (hp && hp.value.trim() !== ''){ showMsg('Submission blocked (spam detected).', false); return false; }
+      if (hp && hp.value.trim() !== ''){
+        showMsg('Submission blocked (spam detected).', false);
+        return false;
+      }
       return true;
     }
 
