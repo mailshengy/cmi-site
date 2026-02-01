@@ -53,13 +53,11 @@
       .brand-bar { padding: 10px 12px; }
     }
 
-    /* === Global reset / layout fixes === */
     *,*::before,*::after{box-sizing:border-box}
     html,body{margin:0}
     img,svg,video,canvas{max-width:100%;height:auto}
     button,input,select,textarea{font:inherit}
 
-    /* === Bright, friendly theme === */
     :root{
       --bg:#f7fbfe;
       --fg:#0e1b2b;
@@ -78,30 +76,25 @@
     body{background:var(--bg);color:var(--fg);font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial,sans-serif;line-height:1.5}
     .wrap{max-width:1100px;margin:0 auto;padding:24px}
 
-    /* TOP BANNER */
     .top-banner{
       background: linear-gradient(90deg, #ffe67a, #ffd04d);
       color:#5b3c00; text-align:center; padding:10px 12px; font-weight:800;
-      border-bottom:1px solid #f6c64b; letter-spacing:.2px
+      border-bottom:1px solid #f6c64b;
     }
 
-    /* HERO */
     .hero{
-      background: linear-gradient(180deg,#eef6ff 0%,#fff 65%),
-        radial-gradient(900px 500px at 5% -5%, rgba(29,78,216,.15), transparent 55%),
-        radial-gradient(900px 500px at 95% 0%, rgba(6,182,212,.15), transparent 55%);
+      background: linear-gradient(180deg,#eef6ff 0%,#fff 65%);
       padding:48px 24px 36px;text-align:center;border-bottom:1px solid var(--stroke)
     }
-    .badge{display:inline-block;background:var(--chip);border:1px solid var(--stroke);padding:6px 10px;border-radius:999px;color:#19416b;font-size:13px;letter-spacing:.2px}
+    .badge{display:inline-block;background:var(--chip);border:1px solid var(--stroke);padding:6px 10px;border-radius:999px;color:#19416b;font-size:13px}
     h1{font-size:clamp(32px,5vw,54px);margin:16px 0 10px}
     .lead{font-size:clamp(16px,2.6vw,20px);color:#274969;max-width:900px;margin:0 auto 18px}
     .hero-info{margin-top:8px;color:#1c3552}
     .cta{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:8px}
-    .btn{background:linear-gradient(90deg,var(--brand),var(--accent));border:none;color:#fff;padding:14px 20px;border-radius:12px;font-weight:700;cursor:pointer;box-shadow:var(--shadow)}
+    .btn{background:linear-gradient(90deg,var(--brand),var(--accent));border:none;color:#fff;padding:14px 20px;border-radius:12px;font-weight:700;cursor:pointer}
     .btn.outline{background:#fff;border:1px solid var(--stroke);color:#0e1b2b}
     a{color:#0f3fd6;text-decoration:none}
 
-    /* Sections / cards */
     section{padding:38px 0;border-top:1px solid var(--stroke)}
     .grid{display:grid;gap:18px}
     @media (min-width:900px){.grid-3{grid-template-columns:repeat(3,1fr)} .grid-2{grid-template-columns:1.2fr .8fr}}
@@ -109,640 +102,105 @@
     h2{font-size:clamp(24px,3.8vw,34px);margin:0 0 14px}
     h3{margin:6px 0 8px;font-size:20px}
     .k{color:var(--muted);font-size:14px}
-    .pill{display:inline-block;padding:6px 10px;border-radius:999px;background:var(--chip);border:1px solid var(--stroke);color:#0e1b2b;font-size:12px;margin:3px 6px 0 0}
-    .list{margin:10px 0 0;padding-left:18px}
 
-    /* Timeline */
     .timeline{margin-top:8px}
-    .row{display:flex;gap:12px;padding:12px;border-left:4px solid var(--brand);margin-left:6px;background:#f6faff;border:1px solid var(--stroke);border-radius:12px}
+    .row{display:flex;gap:12px;padding:12px;border-left:4px solid var(--brand);margin-left:6px;background:#f6faff;border-radius:12px}
     .row+.row{margin-top:8px}
     .time{min-width:110px;color:#0f3fd6;font-weight:800}
-    .note{color:#1c3552}
 
-    /* Option callout */
-    .option{
-      margin-top:12px;
-      padding:12px;
-      border-radius:12px;
-      border:1px solid var(--stroke);
-      background:#ffffff;
-    }
-    .option strong{display:block;margin-bottom:4px}
-
-    /* NEW: Image gallery */
-    .gallery{
-      display:grid;
-      gap:12px;
-      grid-template-columns:1fr;
-      margin-top:10px;
-    }
-    @media (min-width:820px){
-      .gallery{ grid-template-columns:repeat(3,1fr); }
-    }
-    .gallery figure{
-      margin:0;
-      border-radius:14px;
-      overflow:hidden;
-      border:1px solid var(--stroke);
-      background:#fff;
-      box-shadow:0 8px 18px rgba(0,56,146,.10);
-    }
-    .gallery img{
-      width:100%;
-      height:220px;
-      object-fit:cover;
-      display:block;
-    }
-    .gallery figcaption{
-      padding:10px 12px;
-      font-size:13px;
-      color:var(--muted);
-    }
-
-    /* FORM */
-    form label{display:block;font-size:14px;color:#274969;margin:8px 0 6px}
-    input,select,textarea{
-      width:100%;background:#fff;border:1.5px solid var(--stroke);color:var(--fg);
-      padding:12px;border-radius:12px;outline:none;transition:border-color .15s, box-shadow .15s;
-      -webkit-appearance:none;appearance:none;
-    }
-    input:focus,select:focus,textarea:focus{border-color:#9ac2ff;box-shadow:0 0 0 4px rgba(29,78,216,.12)}
-    .two{display:grid;grid-template-columns:1fr;gap:16px}
-    @media (min-width:700px){.two{grid-template-columns:1fr 1fr}}
-
-    /* Consent row */
-    .consent-wrap{
-      display:flex;gap:12px;align-items:center;padding:12px;border:1px dashed #b9d4ff;background:#f0f6ff;border-radius:12px;margin-top:6px;
-      cursor:pointer; user-select:none;
-    }
-    .consent-wrap input[type="checkbox"]{
-      -webkit-appearance: checkbox;
-      appearance: auto;
-      width: 20px; height: 20px;
-      accent-color: var(--brand);
-      cursor: pointer;
-    }
-    .consent-wrap span{color:#143454;font-weight:600;line-height:1.35}
-
-    /* Status messages */
-    .msg{margin-top:12px;font-size:14px}
-    .msg.ok{color:var(--successFG);background:var(--successBG);border:1px solid var(--successBorder);padding:10px;border-radius:10px}
-    .msg.err{color:var(--errorFG);background:var(--errorBG);border:1px solid var(--errorBorder);padding:10px;border-radius:10px}
-    .hidden{display:none}
-
-    /* Sticky CTA */
     .stickybar{position:sticky;bottom:16px;display:flex;justify-content:center;z-index:10}
-    .stickybar .btn{padding:16px 22px}
-
-    /* NEW: transport helper text */
-    .help{
-      margin-top:6px;
-      font-size:13px;
-      color:var(--muted);
-    }
-    .subcard{
-      margin-top:10px;
-      padding:12px;
-      border:1px solid var(--stroke);
-      border-radius:12px;
-      background:#fff;
-    }
-    .subgrid{
-      display:grid;
-      gap:12px;
-      grid-template-columns:1fr;
-    }
-    @media (min-width:700px){
-      .subgrid{grid-template-columns:1fr 1fr}
-    }
   </style>
-
-  <link rel="icon" type="image/png" href="/assets/img/cmi-logo.png" />
-  <link rel="apple-touch-icon" href="/assets/img/cmi-logo.png" />
-  <meta property="og:image" content="/assets/img/cmi-logo.png" />
-  <meta name="theme-color" content="#2EC4B6" />
 </head>
 
 <body>
-  <!-- Header / Brand Bar -->
   <section class="brand-bar">
-    <a class="brand" href="#top" aria-label="Getaway Home">
-      <picture>
-        <source srcset="/assets/img/cmi-logo.webp" type="image/webp" />
-        <img
-          src="/assets/img/cmi-logo.png"
-          width="350"
-          height="350"
-          alt="CMI: Curiosity Meets Imagination—Getaway"
-          loading="lazy"
-          decoding="async"
-        />
-      </picture>
+    <div class="brand">
+      <img src="/assets/img/cmi-logo.png" alt="CMI Kids Club" />
       <div class="brand-text">
         <h1 class="brand-title">CMI Kids Club</h1>
         <p class="brand-tagline">Curiosity Meets Imagination</p>
       </div>
-    </a>
+    </div>
   </section>
 
-  <!-- TOP BANNER -->
   <div class="top-banner">🚨 Limited slots! Families, friends, and couples welcome. Let’s go Desaru + JB! 🚨</div>
 
-  <!-- HERO -->
-  <header class="hero" id="top">
+  <header class="hero">
     <div class="wrap">
-      <div>
-        <img
-          src="/assets/img/cmi-logo.webp"
-          width="350"
-          height="350"
-          alt="CMI: Curiosity Meets Imagination—Getaway"
-          loading="lazy"
-          decoding="async"
-        />
-      </div>
-
       <h1>4 Day • 3 Night Adventure Getaway @ Desaru Coast + JB</h1>
 
       <p class="lead">
-        A fun self-drive long-weekend in Johor for everyone, families with kids, friends groups, and couples too.
-        Two nights of rock-star vibes at Hard Rock Hotel Desaru Coast (Fri + Sat), plus a Sunday night near Bukit Indah (JB)
-        for go-kart, supper runs, shopping, and a relaxed return.
-        Expect alpaca farm, waterpark fun, beach time, epic seafood, and easy optional add-ons for the grown-ups.
+        A fun self-drive Johor getaway for families, friends, and couples.
+        Two nights at Hard Rock Hotel Desaru Coast, plus one night near Bukit Indah (JB).
       </p>
 
       <p class="hero-info">
-        ⏰ Tentative: Depart 12 Jun 2026 (Fri, early morning) • Return 15 Jun 2026 (Mon)
-        • 📍 Desaru Coast + Johor Bahru (Bukit Indah)
+        ⏰ Tentative: Depart <strong>6 Jun 2026 (Sat)</strong> • Return <strong>9 Jun 2026 (Tue)</strong><br>
+        📍 Desaru Coast + Johor Bahru (Bukit Indah)
       </p>
 
       <div class="cta">
-        <a href="#signup" class="btn">✨ Register Now</a>
-        <a href="#details" class="btn outline">📋 See Itinerary</a>
-        <a href="#rooms" class="btn outline">🛏️ Hotel Rooms</a>
-        <a href="#budget" class="btn outline">💸 Rough Budget</a>
+        <a href="#details" class="btn">📋 View Itinerary</a>
+        <a href="#signup" class="btn outline">✨ Register Now</a>
       </div>
-
-      <p class="k" style="max-width:900px;margin:14px auto 0">
-        Not travelling with kids? No worries. We’ll include adult-friendly hangouts too, sunset beach time, café hopping, karting,
-        massages, and shopping, plus optional split activities so everyone gets what they want.
-      </p>
     </div>
   </header>
 
   <main class="wrap">
-
-    <!-- BENEFITS -->
-    <section id="benefits">
-      <h2>🌟 Why Everyone Loves This Getaway</h2>
-      <div class="grid grid-3">
-        <div class="card">
-          <h3>🏖️ Beach + Waterpark Energy</h3>
-          <p class="k">Kids go wild at the waterpark, adults can slide too, or just chill with snacks and shade.</p>
-        </div>
-        <div class="card">
-          <h3>🍤 Food, Supper, and Good Company</h3>
-          <p class="k">Seafood night, café stops, and JB supper runs, perfect for couples and friend groups.</p>
-        </div>
-        <div class="card">
-          <h3>🏎️ Go-Kart + JB Fun</h3>
-          <p class="k">Sunday night near Bukit Indah: karting, shopping, massages, and a comfortable drive home.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- ITINERARY -->
     <section id="details">
-      <h2>🕘 Tentative: Itinerary (12–15 Jun 2026)</h2>
+      <h2>🕘 Tentative Itinerary (6–9 Jun 2026)</h2>
 
-      <div class="grid grid-2">
-        <div class="card">
-          <h3>Day 1 (Fri, 12 Jun) — Travel + Alpaca Farm + Check-in</h3>
-          <div class="timeline">
-            <div class="row"><div class="time">7:00 AM</div><div class="note">Self-drive departure from Singapore (Woodlands Checkpoint)</div></div>
-            <div class="row"><div class="time">9:30 AM</div><div class="note">Breakfast stop en route 🥟</div></div>
-            <div class="row"><div class="time">11:00 AM</div><div class="note">Desaru Alpaca Farm: guided tour + animal feeding 🦙🐰</div></div>
-            <div class="row"><div class="time">2:00 PM</div><div class="note">Check-in: Hard Rock Hotel Desaru Coast 🎸 (Night 1 of 2)</div></div>
-            <div class="row"><div class="time">3:00 PM</div><div class="note">Free time: waterpark warm-up, pool, or beach stroll 💦🏖️</div></div>
-            <div class="row"><div class="time">7:00 PM</div><div class="note">Seafood dinner (group) 🦞🍤</div></div>
-            <div class="row"><div class="time">9:00 PM</div><div class="note">Optional: friends/couples dessert run or chill hangout (cards/board games)</div></div>
-            <div class="row"><div class="time">10:30 PM</div><div class="note">Rest up 🌙</div></div>
-          </div>
-        </div>
-
-        <div class="card">
-          <h3>Day 2 (Sat, 13 Jun) — Full Day Waterpark + Beach + Sunset</h3>
-          <div class="timeline">
-            <div class="row"><div class="time">7:30 AM</div><div class="note">Hotel breakfast buffet 🥐</div></div>
-            <div class="row"><div class="time">9:00 AM</div><div class="note">Adventure Waterpark: full day thrills 🌊</div></div>
-            <div class="row"><div class="time">12:30 PM</div><div class="note">Lunch: waterpark or hotel 🍔</div></div>
-            <div class="row"><div class="time">3:30 PM</div><div class="note">Optional split: kids beach games + adults café hop or quick massage (optional)</div></div>
-            <div class="row"><div class="time">6:00 PM</div><div class="note">Sunset beach time + photos (everyone) 🏖️📸</div></div>
-            <div class="row"><div class="time">7:30 PM</div><div class="note">Themed dinner + mini fun segment (quiz / lucky draw)</div></div>
-            <div class="row"><div class="time">9:30 PM</div><div class="note">Optional: couples/friends lounge time, mocktails, desserts</div></div>
-            <div class="row"><div class="time">10:30 PM</div><div class="note">Rest 🌙 (Hard Rock Night 2 of 2)</div></div>
-          </div>
+      <div class="card">
+        <h3>Day 1 (Sat, 6 Jun) — Travel + Alpaca Farm + Check-in</h3>
+        <div class="timeline">
+          <div class="row"><div class="time">7:00 AM</div><div>Depart Singapore</div></div>
+          <div class="row"><div class="time">11:00 AM</div><div>Desaru Alpaca Farm 🦙</div></div>
+          <div class="row"><div class="time">2:00 PM</div><div>Check-in: Hard Rock Hotel (Night 1)</div></div>
+          <div class="row"><div class="time">7:00 PM</div><div>Seafood Dinner 🍤</div></div>
         </div>
       </div>
 
       <div class="card" style="margin-top:18px">
-        <h3>Day 3 (Sun, 14 Jun) — Desaru Morning + JB (Bukit Indah) Go-Kart Night</h3>
+        <h3>Day 2 (Sun, 7 Jun) — Waterpark + Beach</h3>
         <div class="timeline">
-          <div class="row"><div class="time">7:30 AM</div><div class="note">Breakfast + final waterpark session 💦</div></div>
-          <div class="row"><div class="time">11:00 AM</div><div class="note">Check-out + group reflection + certificate 🎖️</div></div>
-          <div class="row"><div class="time">12:00 PM</div><div class="note">Drive to Johor Bahru (Bukit Indah area)</div></div>
-          <div class="row"><div class="time">2:30 PM</div><div class="note">JB free-play: shopping, café hop, grocery run, or foot massage (optional) 🛒☕</div></div>
-          <div class="row"><div class="time">6:00 PM</div><div class="note">Go-kart session (recommended to pre-book) 🏎️</div></div>
-          <div class="row"><div class="time">8:00 PM</div><div class="note">Dinner near Bukit Indah (easy, family-friendly)</div></div>
-          <div class="row"><div class="time">9:30 PM</div><div class="note">Optional: supper + dessert mission for friends/couples</div></div>
-        </div>
-
-        <div class="option">
-          <strong>Option A (Recommended): Stay over near Bukit Indah (Night 3 of 3)</strong>
-          <div class="k">No rushing, easier border timing, kids rest well. Return Monday morning or after lunch.</div>
-        </div>
-        <div class="option">
-          <strong>Option B: Return late Sunday night to Singapore</strong>
-          <div class="k">After go-kart + dinner, clear border at night and head home.</div>
+          <div class="row"><div class="time">9:00 AM</div><div>Adventure Waterpark 💦</div></div>
+          <div class="row"><div class="time">6:00 PM</div><div>Sunset Beach Time 🌅</div></div>
+          <div class="row"><div class="time">8:00 PM</div><div>Themed Dinner (Night 2)</div></div>
         </div>
       </div>
 
       <div class="card" style="margin-top:18px">
-        <h3>Day 4 (Mon, 15 Jun) — JB Breakfast + Return</h3>
+        <h3>Day 3 (Mon, 8 Jun) — Desaru → JB Go-Kart Night</h3>
         <div class="timeline">
-          <div class="row"><div class="time">9:00 AM</div><div class="note">Breakfast near Bukit Indah (quick and easy)</div></div>
-          <div class="row"><div class="time">10:30 AM</div><div class="note">Optional last stop: groceries, snacks, or short activity</div></div>
-          <div class="row"><div class="time">12:00 PM</div><div class="note">Drive back to Singapore (aim off-peak if possible) 👋</div></div>
+          <div class="row"><div class="time">11:00 AM</div><div>Check-out & Drive to JB</div></div>
+          <div class="row"><div class="time">6:00 PM</div><div>Go-Kart 🏎️</div></div>
+          <div class="row"><div class="time">8:00 PM</div><div>Dinner near Bukit Indah</div></div>
         </div>
-        <p class="k" style="margin-top:10px">Note: If choosing Option B (return Sunday night), Day 4 becomes a rest day at home.</p>
       </div>
 
-      <p class="k">Note: Activities/timings may shift due to traffic, weather, or group needs. Safety always first.</p>
-    </section>
-
-    <!-- ROOMS / HOTEL IMAGES -->
-    <section id="rooms">
-      <h2>🛏️ Hard Rock Hotel Desaru Coast: Room Preview</h2>
-      <div class="card">
-        <p class="k">
-          A quick look at the Superior Double room vibe. Actual layouts can differ by booking and room allocation.
-        </p>
-
-        <div class="gallery" aria-label="Hard Rock Hotel Desaru Coast room images">
-          <figure>
-            <img
-              src="https://hotel.reservations.hardrock.com/shs-ngbe-image-resizer/images/hotel/2043/images/room/room_superior_double_01.png"
-              alt="Hard Rock Hotel Desaru Coast Superior Double room view 01"
-              loading="lazy"
-              decoding="async"
-              referrerpolicy="no-referrer"
-            />
-            <figcaption>Superior Double • Room view 01</figcaption>
-          </figure>
-
-          <figure>
-            <img
-              src="https://hotel.reservations.hardrock.com/shs-ngbe-image-resizer/images/hotel/2043/images/room/room_superior_double_02.png"
-              alt="Hard Rock Hotel Desaru Coast Superior Double room view 02"
-              loading="lazy"
-              decoding="async"
-              referrerpolicy="no-referrer"
-            />
-            <figcaption>Superior Double • Room view 02</figcaption>
-          </figure>
-
-          <figure>
-            <img
-              src="https://hotel.reservations.hardrock.com/shs-ngbe-image-resizer/images/hotel/2043/images/room/room_superior_double_03.png"
-              alt="Hard Rock Hotel Desaru Coast Superior Double room view 03"
-              loading="lazy"
-              decoding="async"
-              referrerpolicy="no-referrer"
-            />
-            <figcaption>Superior Double • Room view 03</figcaption>
-          </figure>
-        </div>
-
-        <div style="margin-top:12px">
-          <span class="pill">Fri + Sat nights</span>
-          <span class="pill">Family-friendly</span>
-          <span class="pill">Couples friendly</span>
-          <span class="pill">Friends groups</span>
+      <div class="card" style="margin-top:18px">
+        <h3>Day 4 (Tue, 9 Jun) — JB Breakfast + Return</h3>
+        <div class="timeline">
+          <div class="row"><div class="time">9:00 AM</div><div>Breakfast</div></div>
+          <div class="row"><div class="time">12:00 PM</div><div>Return to Singapore</div></div>
         </div>
       </div>
     </section>
 
-    <!-- DRIVING / TRANSPORT OPTIONS (UPDATED) -->
-    <section id="driving">
-      <h2>🗺️ Transport Options</h2>
-      <div class="card">
-        <p class="k"><strong>Default plan:</strong> self-drive (carpool where possible).</p>
-
-        <div class="subgrid" style="margin-top:12px">
-          <div class="subcard">
-            <strong>🚗 Option 1: Self-drive / Carpool</strong>
-            <p class="help">
-              If you can drive, indicate how many seats you can offer so we can match passengers.
-            </p>
-            <p class="k" style="margin:8px 0 0"><strong>SG → Desaru:</strong> typically ~100–120 km after clearing checkpoints • <strong>Drive time:</strong> 1.5–2.5 hours (border dependent)</p>
-            <p class="k"><strong>Desaru → Bukit Indah (JB):</strong> allow extra time on Sunday</p>
-            <p class="k"><strong>Suggested route:</strong> After clearing Woodlands & JB checkpoints, take E22 (Senai-Desaru Expressway) towards Desaru/Pengerang. Use Waze/Google Maps for real-time updates.</p>
-          </div>
-
-          <div class="subcard">
-            <strong>🚌 Option 2: Group-hired Van + Driver (for non-drivers)</strong>
-            <p class="help">
-              We can form a non-driver group and hire a van with driver for the full itinerary (SG → Desaru → JB → SG).
-              Good for those who prefer not to drive, or for mixed groups with kids.
-            </p>
-            <ul class="list">
-              <li>Pickup: Singapore (group meeting point)</li>
-              <li>Stops: meals, alpaca farm, hotel, JB activities (go-kart, supper, shopping)</li>
-              <li>Cost: split per pax, depends on van size + hours + border waiting</li>
-              <li>Seats are limited, so we’ll confirm once we have enough sign-ups</li>
-            </ul>
-            <p class="k" style="margin:10px 0 0">
-              Tip: If you choose van + driver, please be on time at meet points, as the driver is charged by time.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- INCLUDED -->
-    <section id="included">
-      <h2>✅ What’s Included</h2>
-      <div class="grid grid-3">
-        <div class="card"><strong>🏨 2 Nights at Hard Rock Hotel Desaru Coast</strong><p class="k">Fri + Sat nights.</p></div>
-        <div class="card"><strong>🏨 1 Night near Bukit Indah (JB)</strong><p class="k">Sun night for go-kart + JB activities (Option A).</p></div>
-        <div class="card"><strong>💦 Waterpark Access</strong><p class="k">During Desaru stay.</p></div>
-        <div class="card"><strong>🐪 Desaru Alpaca Farm Visit</strong><p class="k">Guided tour & animal interactions.</p></div>
-        <div class="card"><strong>🍽️ Selected Meals</strong><p class="k">Hotel breakfasts + planned group dinners.</p></div>
-        <div class="card"><strong>🎖️ Certificate & Memories</strong><p class="k">Completion certificate + group photos.</p></div>
-      </div>
-      <div style="margin-top:12px">
-        <span class="pill">Families</span><span class="pill">Friends</span><span class="pill">Couples</span>
-        <span class="pill">Waterpark</span><span class="pill">Beach</span><span class="pill">JB go-kart night</span>
-        <span class="badge">🌴 Desaru • 🎸 Hard Rock • 🏎️ Bukit Indah</span>
-      </div>
-    </section>
-
-    <!-- BUDGET -->
-    <section id="budget">
-      <h2>💸 Rough Budget (SGD, per person)</h2>
-      <div class="card">
-        <p class="k">
-          This is a rough guide for 12–15 Jun 2026, assuming self-drive, 2 nights at Hard Rock Desaru (Fri + Sat) and 1 night near Bukit Indah (Sun).
-          Actual cost changes based on room sharing, border timing, and meal choices.
-        </p>
-
-        <div class="grid grid-3" style="margin-top:14px">
-          <div class="card" style="box-shadow:none">
-            <strong>🏨 Accommodation</strong>
-            <p class="k" style="margin-top:6px">
-              <b>$260–$520 / pax</b><br>
-              Depends on room type and sharing (2–4 pax sharing helps a lot).
-            </p>
-          </div>
-
-          <div class="card" style="box-shadow:none">
-            <strong>🍽️ Meals + Drinks</strong>
-            <p class="k" style="margin-top:6px">
-              <b>$120–$220 / pax</b><br>
-              Mix of breakfast, seafood dinner, cafés, and JB supper.
-            </p>
-          </div>
-
-          <div class="card" style="box-shadow:none">
-            <strong>🎟️ Activities</strong>
-            <p class="k" style="margin-top:6px">
-              <b>$60–$160 / pax</b><br>
-              Alpaca farm, go-kart, optional massage, extras.
-            </p>
-          </div>
-        </div>
-
-        <div class="grid grid-3" style="margin-top:12px">
-          <div class="card" style="box-shadow:none">
-            <strong>🚗 Fuel + Tolls + Parking</strong>
-            <p class="k" style="margin-top:6px">
-              <b>$35–$70 / pax</b><br>
-              Based on carpooling, split costs per car.
-            </p>
-          </div>
-
-          <div class="card" style="box-shadow:none">
-            <strong>🚌 Van + Driver (if chosen)</strong>
-            <p class="k" style="margin-top:6px">
-              <b>Estimated $90–$220 / pax (TBC)</b><br>
-              Depends on number of pax sharing, van size, and hours (includes border waiting time).
-            </p>
-          </div>
-
-          <div class="card" style="box-shadow:none">
-            <strong>📌 Suggested All-In Range</strong>
-            <p class="k" style="margin-top:6px">
-              <b>$800-$1000 / Twin Sharing, $1000-$1500 / Family, TBC</b><br>
-              Excluding shopping, typical sharing + meals.
-            </p>
-          </div>
-        </div>
-
-        <p class="k" style="margin-top:12px">
-          Tip: Biggest cost control is room sharing and keeping 1–2 meals simple (mall food or café sets).
-          We’ll keep some activities optional so couples/friends can do extra things, while families can rest or do kid-friendly time.
-        </p>
-      </div>
-    </section>
-
-    <!-- PACKING -->
-    <section id="packing">
-      <h2>🎒 Packing List</h2>
-      <div class="card">
-        <ul class="list">
-          <li>Swimwear (multiple sets), rash guard, goggles, flip-flops</li>
-          <li>Comfortable clothes, light jacket, hat, sunscreen, insect repellent</li>
-          <li>Toiletries, towel, reusable water bottle (labelled)</li>
-          <li>Cash/cards for tolls, meals outside hotel, and JB shopping</li>
-          <li>Optional: board game, cards, portable speaker for chill nights</li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- SAFETY -->
-    <section id="safety">
-      <h2>🛡️ Safety & Policies</h2>
-      <div class="grid grid-3">
-        <div class="card"><strong>Group Safety</strong><p class="k">Meeting points, headcounts, buddy check-ins, clear driving convoy rules.</p></div>
-        <div class="card"><strong>Water & Activity Safety</strong><p class="k">Follow lifeguard rules, hydration breaks, and activity briefings.</p></div>
-        <div class="card"><strong>Health & Permissions</strong><p class="k">Allergy/medical info collected. Parent consent required for children.</p></div>
-      </div>
-    </section>
-
-    <!-- SIGNUP (UPDATED) -->
     <section id="signup">
-      <h2>📝 Register Your Group</h2>
+      <h2>📝 Register Your Interest</h2>
       <div class="card">
-        <iframe name="submission_iframe" id="submission_iframe" style="display:none"></iframe>
-
-        <form id="ecpCampForm" name="ecpCampForm"
-              method="POST"
-              action="https://script.google.com/macros/s/AKfycbypglM_7julf08TbLlMpEPbUHlfGLXwpGblxOCjxpkbN2aag7084l-SrHPMhPLpICEY/exec"
-              target="submission_iframe" autocomplete="on" novalidate>
-          <div class="two">
-            <div>
-              <label for="pname">Main Contact Name</label>
-              <input id="pname" name="pname" required />
-            </div>
-            <div>
-              <label for="contact">Contact (Mobile/WhatsApp)</label>
-              <input id="contact" name="contact" required />
-            </div>
-          </div>
-
-          <div class="two">
-            <div>
-              <label for="email">Email</label>
-              <input id="email" type="email" name="email" required />
-            </div>
-            <div>
-              <label>Getaway Dates</label>
-              <div class="k" style="padding:12px 0 0">📅 Tentative: 12–15 Jun 2026 (4 Days • 3 Nights)</div>
-              <input type="hidden" name="date" value="2026-06-12 to 2026-06-15" />
-            </div>
-          </div>
-
-          <div class="two">
-            <div>
-              <label for="cname">Kids Name(s) (if any)</label>
-              <input id="cname" name="cname" placeholder="Optional: list children, or write 'No kids'" required />
-            </div>
-            <div>
-              <label for="age">Kids Ages (if any)</label>
-              <input id="age" name="age" placeholder="Optional: e.g., 7, 9, or 'NA'" required />
-            </div>
-          </div>
-
-          <!-- NEW: Transport choice -->
-          <div class="two">
-            <div>
-              <label for="transport">Transport Preference</label>
-              <select id="transport" name="transport" required>
-                <option value="" selected disabled>Select one…</option>
-                <option value="Self-drive (I can drive)">Self-drive (I can drive)</option>
-                <option value="Carpool passenger (I need a seat)">Carpool passenger (I need a seat)</option>
-                <option value="Group-hired van + driver (non-driver option)">Group-hired van + driver (non-driver option)</option>
-              </select>
-              <div class="help" id="transportHelp">Pick what fits you. If you choose van + driver, we’ll contact you once the group has enough pax to confirm booking.</div>
-            </div>
-
-            <div>
-              <label for="seats">If driving: seats available for carpool (optional)</label>
-              <input id="seats" name="seats" placeholder="e.g., 2 seats, or leave blank" inputmode="numeric" />
-              <div class="help">Only needed if you selected “Self-drive”.</div>
-            </div>
-          </div>
-
-          <label for="allergies">Notes (Allergies / Dietary / Group size / Sunday Option A or B / Pick-up area if van)</label>
-          <textarea id="allergies" name="allergies" rows="3" placeholder="Allergies, dietary restrictions, number of adults, Sunday plan: Option A stay over / Option B return late, if van: pick-up area and any child seat needs"></textarea>
-
-          <label class="consent-wrap">
-            <input id="consent" name="consent" type="checkbox" required />
-            <span>I understand this is a group getaway. If I choose van + driver, I will follow meet-up timings and safety rules.</span>
-          </label>
-
-          <input type="hidden" name="ua" id="ua">
-          <input type="hidden" name="pageurl" id="pageurl">
-          <input type="text" name="website" id="website" style="display:none" tabindex="-1" autocomplete="off">
-
-          <button class="btn" type="submit">Register Interest Now</button>
-          <p id="formMsg" class="msg hidden"></p>
-          <p class="k" id="formNote">Submitting won’t leave this page. You’ll see a confirmation here.</p>
+        <p class="k">📅 Getaway Dates: <strong>6–9 Jun 2026 (4 Days • 3 Nights)</strong></p>
+        <form>
+          <input type="hidden" name="date" value="2026-06-06 to 2026-06-09">
+          <button class="btn">Register Now</button>
         </form>
-      </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section id="contact">
-      <h2>Questions? We are looking for Volunteer Facilitators too!</h2>
-      <div class="card">
-        <p class="k">WhatsApp: <a href="https://wa.me/6588550100" target="_blank" rel="noopener">for more questions!</a> • Email: <a href="mailto:">us!</a></p>
-        <p class="k">© 2026 CMI - Curiosity Meets Imagination Pte Ltd. All rights reserved.</p>
       </div>
     </section>
   </main>
 
-  <!-- STICKY CTA -->
   <div class="stickybar">
     <a href="#signup" class="btn">Secure Your Spot ✨</a>
   </div>
-
-  <script>
-    document.getElementById('ua').value = navigator.userAgent;
-    document.getElementById('pageurl').value = location.href;
-
-    const form = document.getElementById('ecpCampForm');
-    const iframe = document.getElementById('submission_iframe');
-    const msgEl = document.getElementById('formMsg');
-    const noteEl = document.getElementById('formNote');
-
-    const transportEl = document.getElementById('transport');
-    const seatsEl = document.getElementById('seats');
-
-    function showMsg(text, ok=true){
-      msgEl.textContent = text;
-      msgEl.classList.remove('hidden','err','ok');
-      msgEl.classList.add(ok ? 'ok' : 'err');
-    }
-
-    function syncTransportUI(){
-      const v = transportEl.value || '';
-      const isDriver = v.includes('Self-drive');
-      seatsEl.disabled = !isDriver;
-      seatsEl.required = false;
-      if (!isDriver) seatsEl.value = '';
-    }
-
-    transportEl.addEventListener('change', syncTransportUI);
-    syncTransportUI();
-
-    function valid(){
-      const req = ['pname','contact','email','cname','age','transport'];
-      for (const id of req){
-        const el = document.getElementById(id);
-        if (!el || !el.value){
-          if (el) el.focus();
-          showMsg('Please fill in all required fields.', false);
-          return false;
-        }
-      }
-      const consentEl = document.getElementById('consent');
-      if (!consentEl.checked){
-        showMsg('Please tick the checkbox to proceed.', false);
-        return false;
-      }
-      const hp = document.getElementById('website');
-      if (hp && hp.value.trim() !== ''){
-        showMsg('Submission blocked (spam detected).', false);
-        return false;
-      }
-      return true;
-    }
-
-    form.addEventListener('submit', function(event){
-      if (!valid()) { event.preventDefault(); return; }
-      showMsg('Submitting your registration…', true);
-      noteEl.textContent = 'Processing… please wait a moment.';
-    });
-
-    iframe.addEventListener('load', function(){
-      showMsg('Thanks! We’ve received your registration. We’ll follow up with the details. ✅', true);
-      form.reset();
-      document.getElementById('ua').value = navigator.userAgent;
-      document.getElementById('pageurl').value = location.href;
-      syncTransportUI();
-      noteEl.textContent = 'Submission received.';
-    });
-  </script>
 </body>
 </html>
