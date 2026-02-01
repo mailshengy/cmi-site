@@ -4,138 +4,155 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>4 Day • 3 Night Getaway @ Desaru + JB</title>
-  <meta name="description" content="Fun 4-day Johor getaway for everyone: families, friends, and couples. 2 nights at Hard Rock Hotel Desaru Coast + 1 night near Bukit Indah (JB). Alpaca farm, waterpark, beach games, seafood, go-kart, cafés, massages, and more." />
 
   <style>
-    /* Brand Bar */
-    .brand-bar {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 16px;
-      padding: 12px 16px;
-      background: #f7fbfe;
-      border-bottom: 1px solid rgba(0,0,0,0.06);
-    }
-    .brand {
-      display: inline-flex;
-      align-items: center;
-      gap: 14px;
-      text-decoration: none;
-    }
-    .brand picture,
-    .brand img {
-      display: block;
-      max-width: 120px;
-      height: auto;
-    }
-    .brand-text {
-      display: flex;
-      flex-direction: column;
-      line-height: 1.1;
-    }
-    .brand-title {
-      margin: 0;
-      font-size: clamp(18px, 2.6vw, 26px);
-      font-weight: 800;
-      color: #c77739;
-      letter-spacing: 0.2px;
-    }
-    .brand-tagline {
-      margin: 2px 0 0;
-      font-size: clamp(12px, 1.6vw, 14px);
-      color: #17282b;
-      opacity: 0.9;
-    }
-    @media (max-width: 640px) {
-      .brand picture,
-      .brand img { max-width: 68px; }
-      .brand-bar { padding: 10px 12px; }
+    /* ===== ORANGE THEME ===== */
+    :root{
+      --bg:#fff8f1;
+      --fg:#2b1b0e;
+      --muted:#7a4a2a;
+
+      --brand:#f97316;      /* primary orange */
+      --accent:#fb923c;     /* lighter orange */
+      --card:#ffffff;
+      --stroke:#ffd7b5;
+      --shadow:0 10px 30px rgba(249,115,22,.22);
+      --radius:16px;
+      --chip:#fff1e6;
+
+      --successBG:#ffedd5;
+      --successBorder:#fdba74;
+      --successFG:#7c2d12;
+
+      --errorBG:#fee2e2;
+      --errorBorder:#fecaca;
+      --errorFG:#7f1d1d;
     }
 
     *,*::before,*::after{box-sizing:border-box}
     html,body{margin:0}
-    img,svg,video,canvas{max-width:100%;height:auto}
-    button,input,select,textarea{font:inherit}
-
-    :root{
-      --bg:#f7fbfe;
-      --fg:#0e1b2b;
-      --muted:#48607a;
-      --brand:#1d4ed8;
-      --accent:#06b6d4;
-      --card:#ffffff;
-      --stroke:#dbe7fb;
-      --shadow:0 10px 30px rgba(0,56,146,.12);
-      --radius:16px;
-      --chip:#eef5ff;
-      --successBG:#d1f4e0; --successBorder:#9be6c0; --successFG:#0f5132;
-      --errorBG:#ffe0e0; --errorBorder:#ffb4b4; --errorFG:#6b1111;
+    body{
+      background:var(--bg);
+      color:var(--fg);
+      font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+      line-height:1.5;
     }
 
-    body{background:var(--bg);color:var(--fg);font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial,sans-serif;line-height:1.5}
     .wrap{max-width:1100px;margin:0 auto;padding:24px}
 
+    /* Brand bar */
+    .brand-bar{
+      display:flex;justify-content:center;align-items:center;
+      padding:14px;background:#fff3e8;border-bottom:1px solid var(--stroke)
+    }
+    .brand{display:flex;gap:14px;align-items:center}
+    .brand img{max-width:72px}
+    .brand-title{margin:0;font-size:22px;font-weight:800;color:var(--brand)}
+    .brand-tagline{margin:0;font-size:13px;color:var(--muted)}
+
+    /* Banner */
     .top-banner{
-      background: linear-gradient(90deg, #ffe67a, #ffd04d);
-      color:#5b3c00; text-align:center; padding:10px 12px; font-weight:800;
-      border-bottom:1px solid #f6c64b;
+      background:linear-gradient(90deg,#fb923c,#f97316);
+      color:#fff;
+      text-align:center;
+      padding:10px;
+      font-weight:800;
+      letter-spacing:.3px;
     }
 
+    /* Hero */
     .hero{
-      background: linear-gradient(180deg,#eef6ff 0%,#fff 65%);
-      padding:48px 24px 36px;text-align:center;border-bottom:1px solid var(--stroke)
+      background:
+        radial-gradient(900px 400px at 10% -10%, rgba(249,115,22,.25), transparent 55%),
+        radial-gradient(900px 400px at 90% 0%, rgba(251,146,60,.25), transparent 55%),
+        linear-gradient(180deg,#fff4ea 0%, #ffffff 70%);
+      text-align:center;
+      padding:52px 24px 36px;
+      border-bottom:1px solid var(--stroke);
     }
-    .badge{display:inline-block;background:var(--chip);border:1px solid var(--stroke);padding:6px 10px;border-radius:999px;color:#19416b;font-size:13px}
-    h1{font-size:clamp(32px,5vw,54px);margin:16px 0 10px}
-    .lead{font-size:clamp(16px,2.6vw,20px);color:#274969;max-width:900px;margin:0 auto 18px}
-    .hero-info{margin-top:8px;color:#1c3552}
-    .cta{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:8px}
-    .btn{background:linear-gradient(90deg,var(--brand),var(--accent));border:none;color:#fff;padding:14px 20px;border-radius:12px;font-weight:700;cursor:pointer}
-    .btn.outline{background:#fff;border:1px solid var(--stroke);color:#0e1b2b}
-    a{color:#0f3fd6;text-decoration:none}
 
-    section{padding:38px 0;border-top:1px solid var(--stroke)}
-    .grid{display:grid;gap:18px}
-    @media (min-width:900px){.grid-3{grid-template-columns:repeat(3,1fr)} .grid-2{grid-template-columns:1.2fr .8fr}}
-    .card{background:var(--card);border:1px solid var(--stroke);border-radius:var(--radius);padding:18px;box-shadow:var(--shadow)}
-    h2{font-size:clamp(24px,3.8vw,34px);margin:0 0 14px}
-    h3{margin:6px 0 8px;font-size:20px}
+    h1{font-size:clamp(32px,5vw,54px);margin:10px 0}
+    .lead{max-width:900px;margin:0 auto 18px;color:#7a3f17;font-size:18px}
+    .hero-info{color:#9a4a1b;font-weight:600}
+
+    /* Buttons */
+    .cta{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:14px}
+    .btn{
+      background:linear-gradient(90deg,var(--brand),var(--accent));
+      color:#fff;border:none;border-radius:14px;
+      padding:14px 22px;font-weight:800;
+      cursor:pointer;box-shadow:var(--shadow);
+      text-decoration:none;
+    }
+    .btn.outline{
+      background:#fff;border:2px solid var(--brand);
+      color:var(--brand);
+    }
+
+    /* Sections */
+    section{padding:40px 0;border-top:1px solid var(--stroke)}
+    h2{font-size:32px;margin-bottom:16px;color:#9a3412}
+    h3{margin:6px 0 10px;color:#7c2d12}
     .k{color:var(--muted);font-size:14px}
 
-    .timeline{margin-top:8px}
-    .row{display:flex;gap:12px;padding:12px;border-left:4px solid var(--brand);margin-left:6px;background:#f6faff;border-radius:12px}
-    .row+.row{margin-top:8px}
-    .time{min-width:110px;color:#0f3fd6;font-weight:800}
+    .card{
+      background:var(--card);
+      border:1px solid var(--stroke);
+      border-radius:var(--radius);
+      padding:18px;
+      box-shadow:var(--shadow);
+    }
 
-    .stickybar{position:sticky;bottom:16px;display:flex;justify-content:center;z-index:10}
+    /* Timeline */
+    .timeline{margin-top:10px}
+    .row{
+      display:flex;gap:14px;
+      padding:12px;
+      border-left:5px solid var(--brand);
+      background:#fff7ed;
+      border-radius:12px;
+    }
+    .row+.row{margin-top:8px}
+    .time{min-width:110px;font-weight:800;color:var(--brand)}
+
+    /* Sticky CTA */
+    .stickybar{
+      position:sticky;bottom:16px;
+      display:flex;justify-content:center;
+      z-index:10;
+    }
   </style>
 </head>
 
 <body>
-  <section class="brand-bar">
+
+  <!-- Brand -->
+  <div class="brand-bar">
     <div class="brand">
-      <img src="/assets/img/cmi-logo.png" alt="CMI Kids Club" />
-      <div class="brand-text">
+      <img src="/assets/img/cmi-logo.png" alt="CMI Kids Club">
+      <div>
         <h1 class="brand-title">CMI Kids Club</h1>
         <p class="brand-tagline">Curiosity Meets Imagination</p>
       </div>
     </div>
-  </section>
+  </div>
 
-  <div class="top-banner">🚨 Limited slots! Families, friends, and couples welcome. Let’s go Desaru + JB! 🚨</div>
+  <!-- Banner -->
+  <div class="top-banner">
+    🚨 Limited slots! Bright summer getaway to Desaru + JB! 🚨
+  </div>
 
+  <!-- Hero -->
   <header class="hero">
     <div class="wrap">
-      <h1>4 Day • 3 Night Adventure Getaway @ Desaru Coast + JB</h1>
-
+      <h1>4 Day • 3 Night Adventure Getaway</h1>
       <p class="lead">
-        A fun self-drive Johor getaway for families, friends, and couples.
-        Two nights at Hard Rock Hotel Desaru Coast, plus one night near Bukit Indah (JB).
+        A sunny self-drive Johor getaway for families, friends, and couples —
+        beach, waterpark, alpaca farm, go-kart, seafood, and chill vibes.
       </p>
 
       <p class="hero-info">
-        ⏰ Tentative: Depart <strong>6 Jun 2026 (Sat)</strong> • Return <strong>9 Jun 2026 (Tue)</strong><br>
+        ☀️ <strong>6–9 June 2026 (Sat–Tue)</strong><br>
         📍 Desaru Coast + Johor Bahru (Bukit Indah)
       </p>
 
@@ -146,51 +163,53 @@
     </div>
   </header>
 
+  <!-- Itinerary -->
   <main class="wrap">
     <section id="details">
-      <h2>🕘 Tentative Itinerary (6–9 Jun 2026)</h2>
+      <h2>🗓️ Trip Itinerary</h2>
 
       <div class="card">
-        <h3>Day 1 (Sat, 6 Jun) — Travel + Alpaca Farm + Check-in</h3>
+        <h3>Day 1 — Sat, 6 Jun</h3>
         <div class="timeline">
           <div class="row"><div class="time">7:00 AM</div><div>Depart Singapore</div></div>
           <div class="row"><div class="time">11:00 AM</div><div>Desaru Alpaca Farm 🦙</div></div>
-          <div class="row"><div class="time">2:00 PM</div><div>Check-in: Hard Rock Hotel (Night 1)</div></div>
+          <div class="row"><div class="time">2:00 PM</div><div>Check-in: Hard Rock Hotel</div></div>
           <div class="row"><div class="time">7:00 PM</div><div>Seafood Dinner 🍤</div></div>
         </div>
       </div>
 
       <div class="card" style="margin-top:18px">
-        <h3>Day 2 (Sun, 7 Jun) — Waterpark + Beach</h3>
+        <h3>Day 2 — Sun, 7 Jun</h3>
         <div class="timeline">
           <div class="row"><div class="time">9:00 AM</div><div>Adventure Waterpark 💦</div></div>
-          <div class="row"><div class="time">6:00 PM</div><div>Sunset Beach Time 🌅</div></div>
-          <div class="row"><div class="time">8:00 PM</div><div>Themed Dinner (Night 2)</div></div>
+          <div class="row"><div class="time">6:00 PM</div><div>Sunset Beach 🌅</div></div>
+          <div class="row"><div class="time">8:00 PM</div><div>Themed Dinner</div></div>
         </div>
       </div>
 
       <div class="card" style="margin-top:18px">
-        <h3>Day 3 (Mon, 8 Jun) — Desaru → JB Go-Kart Night</h3>
+        <h3>Day 3 — Mon, 8 Jun</h3>
         <div class="timeline">
-          <div class="row"><div class="time">11:00 AM</div><div>Check-out & Drive to JB</div></div>
+          <div class="row"><div class="time">11:00 AM</div><div>Drive to JB</div></div>
           <div class="row"><div class="time">6:00 PM</div><div>Go-Kart 🏎️</div></div>
-          <div class="row"><div class="time">8:00 PM</div><div>Dinner near Bukit Indah</div></div>
+          <div class="row"><div class="time">8:00 PM</div><div>Dinner Bukit Indah</div></div>
         </div>
       </div>
 
       <div class="card" style="margin-top:18px">
-        <h3>Day 4 (Tue, 9 Jun) — JB Breakfast + Return</h3>
+        <h3>Day 4 — Tue, 9 Jun</h3>
         <div class="timeline">
           <div class="row"><div class="time">9:00 AM</div><div>Breakfast</div></div>
-          <div class="row"><div class="time">12:00 PM</div><div>Return to Singapore</div></div>
+          <div class="row"><div class="time">12:00 PM</div><div>Return to Singapore 👋</div></div>
         </div>
       </div>
     </section>
 
+    <!-- Signup -->
     <section id="signup">
       <h2>📝 Register Your Interest</h2>
       <div class="card">
-        <p class="k">📅 Getaway Dates: <strong>6–9 Jun 2026 (4 Days • 3 Nights)</strong></p>
+        <p class="k">📅 <strong>6–9 June 2026 (4 Days • 3 Nights)</strong></p>
         <form>
           <input type="hidden" name="date" value="2026-06-06 to 2026-06-09">
           <button class="btn">Register Now</button>
@@ -199,8 +218,10 @@
     </section>
   </main>
 
+  <!-- Sticky CTA -->
   <div class="stickybar">
     <a href="#signup" class="btn">Secure Your Spot ✨</a>
   </div>
+
 </body>
 </html>
